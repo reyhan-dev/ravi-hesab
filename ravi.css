@@ -3,15 +3,22 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{width: 100%;}
+body {
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+}
 
 .hed {
   width: 100%;
   height: 120px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #f8f8f8;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 .left {
   display: flex;
@@ -39,7 +46,7 @@ body{width: 100%;}
   font-weight: 400;
   size: 15px;
   line-height: 23.25px;
-  color: red;
+  color: #0c0d0f;
 }
 .number p {
   width: 106px;
@@ -69,25 +76,50 @@ body{width: 100%;}
   line-height: 24px;
   background-color: #151000;
 }
-.berger {
+.burger {
   display: none;
 }
+.links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 12px;
+  border-bottom: 1px solid #efefef;
+  color: #0c0d0f;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.links li {
+  color: #0c0d0f;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 .hero {
   display: flex;
-  justify-content: center;
+  width: 100%;
   gap: 50px;
   margin-top: 50px;
+  height: max-content;
+  padding-left: 70px;
+  padding-right: 70px;
+  position: relative;
 }
+
+.machinphoto {
+  width: 100%;
+}
+
 .hesab {
-  width: 370px;
-  height: 283px;
-  border-radius: 10px;
-  text-align: end;
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 20px;
-  
+  gap: 10px;
+  margin-top: 20px;
+  width: 50%;
 }
 
 .frst {
@@ -97,7 +129,7 @@ body{width: 100%;}
   font-size: 20px;
   line-height: 31px;
   text-align: right;
-  color: red;
+  color: #0c0d0f;
 }
 .hesab h3 {
   width: 456px;
@@ -122,6 +154,7 @@ body{width: 100%;}
   line-height: 45px;
   text-align: right;
   color: #949494;
+  text-wrap: wrap;
 }
 .start {
   width: 139px;
@@ -143,8 +176,9 @@ body{width: 100%;}
   line-height: 24px;
   background-color: #151000;
 }
-@media (max-width: 570px) {
-  .berger {
+
+@media (max-width: 680px) {
+  .burger {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,12 +211,11 @@ body{width: 100%;}
     text-align: center;
     align-items: center;
     height: 233px;
-    width: 336px;
+    margin-top: 0px;
   }
   .machinphoto {
-    width: 321px;
-    height: 321px;
     margin-top: 30px;
+    width: 100%;
   }
   .start button {
     width: 139px;
@@ -221,6 +254,9 @@ body{width: 100%;}
     font-weight: 400;
     font-size: 18px;
     line-height: 27.9px;
-    color: red;
+  }
+
+  .links {
+    display: none;
   }
 }
