@@ -3,6 +3,8 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{width: 100%;}
+
 .hed {
   width: 100%;
   height: 120px;
@@ -70,7 +72,78 @@
 .berger {
   display: none;
 }
-@media (max-width: 370px) {
+.hero {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+.hesab {
+  width: 370px;
+  height: 283px;
+  border-radius: 10px;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+  
+}
+
+.frst {
+  width: 95px;
+  height: 31px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  text-align: right;
+  color: red;
+}
+.hesab h3 {
+  width: 456px;
+  height: 60px;
+  font-weight: 950px;
+  font-size: 30px;
+  line-height: 60px;
+  text-align: right;
+}
+.firstspan {
+  color: #ffbb00;
+  font-weight: 950px;
+  font-size: 30px;
+  line-height: 60px;
+  text-align: right;
+}
+.text {
+  width: 536px;
+  height: 90px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 45px;
+  text-align: right;
+  color: #949494;
+}
+.start {
+  width: 139px;
+  height: 54px;
+  border-radius: 10px;
+  background-color: #151000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start button {
+  outline: none;
+  border: none;
+  color: #fff;
+  width: 87px;
+  height: 24px;
+  font-weight: 700;
+  size: 15px;
+  line-height: 24px;
+  background-color: #151000;
+}
+@media (max-width: 570px) {
   .berger {
     display: flex;
     justify-content: center;
@@ -94,5 +167,60 @@
   .photo {
     width: 116px;
     height: 29px;
+  }
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .hesab {
+    text-align: center;
+    align-items: center;
+    height: 233px;
+    width: 336px;
+  }
+  .machinphoto {
+    width: 321px;
+    height: 321px;
+    margin-top: 30px;
+  }
+  .start button {
+    width: 139px;
+    height: 54px;
+    border-radius: 10px;
+  }
+  .start {
+    width: 139px;
+    height: 54px;
+    border-radius: 10px;
+    margin-top: 24px;
+  }
+  .text {
+    height: 72px;
+    width: 336px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+  }
+  .hesab h3 {
+    width: 334px;
+    height: 55px;
+    font-weight: 950px;
+    font-size: 22px;
+    line-height: 55px;
+  }
+  .firstspan {
+    line-height: 55px;
+    font-size: 22px;
+    font-weight: 950px;
+  }
+  .frst {
+    width: 86px;
+    height: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27.9px;
+    color: red;
   }
 }
