@@ -103,7 +103,28 @@
   align-content: start;
 }
 
+.swiper-books-container {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  align-content: start;
+}
+
+.swiper-subscription-container {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 570px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+
 .swiper-slide {
+  width: 100%;
 }
 
 .swiper-button-next,
