@@ -94,8 +94,53 @@
   border: 1px solid black;
 }
 
-/* @media (max-width: 768px) {
+.swiper-container {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 430px;
+  padding-right: 30px;
+  align-content: start;
+}
+
+.swiper-slide {
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; /* Customize the navigation buttons */
+}
+
+.swiper-pagination {
+  /* Other styles for the pagination */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Default pagination bullets */
+.swiper-pagination-bullet {
+  background-color: black; /* Set bullet color */
+  width: 8px; /* Default width */
+  height: 8px; /* Default height */
+  opacity: 0.5; /* Slightly transparent for inactive bullets */
+  border-radius: 50%;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  width: 12px; /* Wider bullet for active state */
+  opacity: 1; /* Fully opaque */
+}
+
+@media (max-width: 768px) {
   .btn {
-    width: 100%;
+    background-color: transparent;
+    color: black;
+    box-shadow: none;
+    border-bottom: 1px solid #ededed;
+    border-radius: 0%;
+    height: 50px;
+    width: fit-content;
   }
-} */
+}
