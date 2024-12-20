@@ -158,6 +158,85 @@ bottom: 55px;}
 right: 60px;
 bottom: 55px;}
 .res{display: none;}
+.secondsection{margin-top: 30px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.leftsection{
+    display: flex;
+flex-direction: column;
+width: 312px;
+height: 239px;
+border-radius: 20px;
+background-color: green;
+}
+.sectiontext h1{font-weight: 700;
+font-size: 32px;
+line-height: 32px;
+color: #ffffff;
+text-align: center;
+margin-top: 20px;}
+.picsection{display: flex;
+flex-direction: column;
+position: absolute;
+}
+.hale{position: relative;
+left: 55px;
+top: 60px;}
+.hesab{position: relative;
+bottom: 57px;
+margin-left: 50px;
+}
+.rightsection{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+.upsection{
+    display: flex;
+    gap: 35px;
+    border-bottom: #949494 solid   1px;
+    padding-bottom: 30px;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+.five{display: flex;
+width: 200px;
+gap: 8px;
+}
+.five h1{
+    color: #949494;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: 400;
+ 
+}
+.downsection{display: flex;
+    margin-top: 30px;
+    gap: 35px;
+}
+.downsection button {background-color: #8a8484;
+outline: none;
+border: none;}
+.sex{background-color: #8a8484;
+width: 160px;
+height: 58px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;}
+
+
+
+
+
+
+
 @media (max-width:700px){
     .section{flex-direction: column-reverse;}
     .pic{display: none;}
@@ -168,6 +247,6 @@ bottom: 55px;}
 }
     .left{width: 90%;
     height: 470px;
-gap: 35px;}
-    
+gap: 5px;}
+.down{gap: 15px;}
 }
