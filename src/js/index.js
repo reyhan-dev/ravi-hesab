@@ -33,7 +33,7 @@ var swiper = new Swiper(".swiper-container", {
   },
   breakpoints: {
     // Responsive breakpoints
-    680: {
+    570: {
       slidesPerView: 1.85, // Show 1 slide at a time on small screens
       spaceBetween: 10,
     },
@@ -50,14 +50,14 @@ var swiper = new Swiper(".swiper-container", {
       spaceBetween: 100,
     },
     1660: {
-      slidesPerView: 6,
+      slidesPerView: 4.5,
       spaceBetween: 80,
     },
   },
 });
 
 var swiper = new Swiper(".swiper-books-container", {
-  slidesPerView: 1.1,
+  slidesPerView: 1.01,
   spaceBetween: 0,
   dynamicBullets: true,
   pagination: {
@@ -84,11 +84,50 @@ var swiper = new Swiper(".swiper-books-container", {
       spaceBetween: 20,
     },
     1280: {
-      slidesPerView: 3.5,
+      slidesPerView: 3.3,
       spaceBetween: 100,
     },
     1660: {
-      slidesPerView: 4.25,
+      slidesPerView: 4.1,
+      spaceBetween: 0,
+    },
+  },
+});
+
+var swiper = new Swiper(".swiper-subscription-container", {
+  slidesPerView: 1.15,
+  spaceBetween: 50,
+  dynamicBullets: true,
+  // centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination", // Pagination
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next", // Next button
+    prevEl: ".swiper-button-prev", // Previous button
+  },
+  breakpoints: {
+    // Responsive breakpoints
+    680: {
+      slidesPerView: 1.3, // Show 1 slide at a time on small screens
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 1.75, // Show 2 slides at a time on medium screens
+      spaceBetween: 130,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1660: {
+      slidesPerView: 4.5,
       spaceBetween: 0,
     },
   },
