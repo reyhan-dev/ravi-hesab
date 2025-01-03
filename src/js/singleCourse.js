@@ -18,87 +18,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-var swiper = new Swiper(".swiper-container", {
-  slidesPerView: 1.5,
-  spaceBetween: 24,
-  dynamicBullets: true,
-  pagination: {
-    el: ".swiper-pagination", // Pagination
-    clickable: true,
+var swiper = new Swiper(
+  ".swiper-course-service-container",
+  {
+    slidesPerView: 1.4,
+    spaceBetween: 20,
     dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next", // Next button
-    prevEl: ".swiper-button-prev", // Previous button
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2.5, // Show 2 slides at a time on medium screens
-      spaceBetween: 24,
+    pagination: {
+      el: ".swiper-pagination", // Pagination
+      clickable: true,
+      dynamicBullets: true,
     },
-    1024: {
-      slidesPerView: 2.5,
-      spaceBetween: 24,
+    navigation: {
+      nextEl: ".swiper-button-next", // Next button
+      prevEl: ".swiper-button-prev", // Previous button
     },
-    1280: {
-      slidesPerView: 3,
-      spaceBetween: 24,
+    breakpoints: {
+      // Responsive breakpoints
+      570: {
+        slidesPerView: 1.85, // Show 1 slide at a time on small screens
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 2.5, // Show 2 slides at a time on medium screens
+        spaceBetween: 130,
+      },
+      1024: {
+        slidesPerView: 3.75,
+        spaceBetween: 20,
+      },
     },
+  }
+);
 
-    1440: {
-      slidesPerView: 4,
-      spaceBetween: 24,
-    },
-
-    1920: {
-      slidesPerView: 5,
-      spaceBetween: 24,
-    },
-  },
-});
-
-var swiper = new Swiper(".swiper-blogs-container", {
-  slidesPerView: 1.42,
-  spaceBetween: 24,
-  dynamicBullets: true,
-  pagination: {
-    el: ".swiper-pagination", // Pagination
-    clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next", // Next button
-    prevEl: ".swiper-button-prev", // Previous button
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2.5, // Show 2 slides at a time on medium screens
-      spaceBetween: 130,
-    },
-    1024: {
-      slidesPerView: 2.3,
-      spaceBetween: 24,
-    },
-    1280: {
-      slidesPerView: 3,
-      spaceBetween: 24,
-    },
-
-    1440: {
-      slidesPerView: 3.5,
-      spaceBetween: 24,
-    },
-    1660: {
-      slidesPerView: 4,
-      spaceBetween: 24,
-    },
-
-    
-  },
-});
-
-var swiper = new Swiper(".swiper-books-container", {
-  slidesPerView: 1.065,
+var swiper = new Swiper(".swiper-btn-container", {
+  slidesPerView: 1.9,
   spaceBetween: 24,
   dynamicBullets: true,
   pagination: {
@@ -112,47 +66,25 @@ var swiper = new Swiper(".swiper-books-container", {
   },
   breakpoints: {
     // Responsive breakpoints
-    400: {
-      slidesPerView: 1.1, // Show 1 slide at a time on small screens
-      spaceBetween: 24,
+    570: {
+      slidesPerView: 1.85, // Show 1 slide at a time on small screens
+      spaceBetween: 15,
     },
     768: {
-      slidesPerView: 1.75, // Show 2 slides at a time on medium screens
+      slidesPerView: 2.5, // Show 2 slides at a time on medium screens
       spaceBetween: 130,
     },
     1024: {
-      slidesPerView: 2,
-      spaceBetween: 25,
+      slidesPerView:5,
+      spaceBetween: 24,
     },
-    1280: {
-      slidesPerView: 2.5,
-      spaceBetween: 25,
-    },
-
-    1350: {
-      slidesPerView: 3,
-      spaceBetween: 25,
-    },
-
-    1440: {
-      slidesPerView: 3,
-      spaceBetween: 25,
-    },
-    1660: {
-      slidesPerView: 3,
-      spaceBetween: 25,
-    },
-
-    1920: {
-      slidesPerView: 3,
-      spaceBetween: 25,
-    },
+    
   },
 });
 
-var swiper = new Swiper(".swiper-subscription-container", {
-  slidesPerView: 1.25,
-  spaceBetween: 24,
+var swiper = new Swiper(".swiper-courses-container", {
+  slidesPerView: 1.35,
+  spaceBetween: 20,
   dynamicBullets: true,
   pagination: {
     el: ".swiper-pagination", // Pagination
@@ -164,20 +96,16 @@ var swiper = new Swiper(".swiper-subscription-container", {
     prevEl: ".swiper-button-prev", // Previous button
   },
   breakpoints: {
+    // Responsive breakpoints
+    570: {
+      slidesPerView: 1.85, // Show 1 slide at a time on small screens
+      spaceBetween: 15,
+    },
     768: {
-      slidesPerView: 1.75, // Show 2 slides at a time on medium screens
+      slidesPerView: 2.5, // Show 2 slides at a time on medium screens
       spaceBetween: 130,
     },
     1024: {
-      slidesPerView: 2,
-      spaceBetween: 24,
-    },
-    1280: {
-      slidesPerView: 2.5,
-      spaceBetween: 24,
-    },
-
-    1440: {
       slidesPerView: 3,
       spaceBetween: 24,
     },
@@ -389,6 +317,164 @@ mobileDropdownSearch.addEventListener(
 // dropdownSearch.addEventListener("mouseleave", function () {
 //   dropdownSearch.classList.add("hidden"); // Hide when not hovering
 // });
+
+function toggleAccordion(id) {
+  const content = document.getElementById(id);
+  const arrowIcon =
+    content.previousElementSibling.querySelector(
+      ".arrow-icon"
+    );
+
+  if (content.style.maxHeight) {
+    // Accordion is open, close it
+    content.style.maxHeight = null;
+    content.style.opacity = 0;
+    arrowIcon.classList.remove("rotate-180");
+  } else {
+    // Accordion is closed, open it
+    content.style.maxHeight = content.scrollHeight + "px";
+    content.style.opacity = 1;
+    arrowIcon.classList.add("rotate-180");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons =
+    document.querySelectorAll(".nav-button");
+  const tabContent = document.getElementById("tab-content");
+
+  // Function to switch tabs
+  function switchTab(tabId) {
+    // Hide all tab contents
+    const tabPanels =
+      tabContent.querySelectorAll(".tab-panel");
+    tabPanels.forEach((panel) => {
+      panel.classList.add("hidden");
+    });
+
+    // Deactivate all buttons
+    tabButtons.forEach((btn) => {
+      btn.classList.remove("bg-secondary", "text-white"); // Remove active styles
+      btn.classList.add("text-secondary", "bg-box"); // Add default styles
+    });
+
+    // Activate the current button
+    const activeTabBtn = document.querySelector(
+      `.nav-button[data-tab="${tabId}"]`
+    );
+    activeTabBtn.classList.remove(
+      "text-secondary",
+      "bg-box"
+    ); // Remove default styles
+    activeTabBtn.classList.add(
+      "bg-secondary",
+      "text-white"
+    ); // Add active styles
+
+    // Show the related tab content
+    const activeTab = document.getElementById(
+      `${tabId}-content`
+    );
+    activeTab.classList.remove("hidden");
+  }
+
+  // Add event listeners
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const tabId = button.getAttribute("data-tab");
+      switchTab(tabId);
+    });
+  });
+
+  // Initialize first tab as active
+  switchTab("Headline"); // Default active tab
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleHeaders = document.querySelectorAll(
+    ".toggle-header"
+  );
+
+  toggleHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      const items = header.nextElementSibling; // Get the next sibling (items container)
+
+      // Check if the items are currently displayed
+      if (
+        items.style.display === "none" ||
+        items.style.display === ""
+      ) {
+        items.style.display = "flex"; // Show items
+        header.setAttribute("aria-expanded", "true"); // Update accessibility attribute
+      } else {
+        items.style.display = "none"; // Hide items
+        header.setAttribute("aria-expanded", "false"); // Update accessibility attribute
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionItems = document.querySelectorAll(
+    ".accordion-item"
+  );
+
+  accordionItems.forEach((item) => {
+    const header = item.querySelector(".accordion-header");
+    const content = item.querySelector(
+      ".accordion-content"
+    );
+    const icon = item.querySelector(".accordion-icon");
+
+    header.addEventListener("click", function () {
+      // Toggle height classes based on whether the content is open or not
+      const isOpen = content.classList.contains("open");
+
+      // Close all other items
+      accordionItems.forEach((otherItem) => {
+        const otherContent = otherItem.querySelector(
+          ".accordion-content"
+        );
+        const otherIcon = otherItem.querySelector(
+          ".accordion-icon"
+        );
+        const otherItemHeader = otherItem.querySelector(
+          ".accordion-header"
+        );
+
+        // Collapse other items
+        if (otherItem !== item) {
+          otherContent.classList.remove("open");
+          otherContent.style.display = "none"; // Hide immediately for other accordions
+          otherIcon.classList.remove("open");
+          otherItemHeader.parentElement.classList.remove(
+            "h-full"
+          );
+          otherItemHeader.parentElement.classList.add(
+            "h-[60px]"
+          );
+        }
+      });
+
+      // Toggle current item
+      if (isOpen) {
+        // If open, collapse it (remove h-full and add h-[60px])
+        content.classList.remove("open");
+        content.style.display = "none"; // Hide the content
+        icon.classList.remove("open");
+        item.classList.remove("h-full");
+        item.classList.add("h-[60px]");
+      } else {
+        // If closed, expand it (add h-full and open the content)
+        content.classList.add("open");
+        content.style.display = "block"; // Show the content
+        icon.classList.add("open");
+        item.classList.add("h-full");
+        item.classList.remove("h-[60px]");
+      }
+    });
+  });
+});
 
 function toggleAccordion(id) {
   const content = document.getElementById(id);

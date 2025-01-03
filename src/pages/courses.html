@@ -1,343 +1,1561 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../stylees/courses.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <link href="../output.css" rel="stylesheet" />
+
+    <title>Ravi-hesab-courses</title>
   </head>
-  <body>
-    <!-- first row -->
-    <div class="container">
-      <div class="upsection">
-        <div class="left">
-          <div class="up">
-            <div class="item">
-              <div class="photo">
-                <img src="../assets/thumbnail (4).png" alt="imagetest" />
-              </div>
-              <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-              <div class="seconditem">
-                <div class="leftitem">
-                  <p>جواد عظیمی فرد</p>
-                  <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-                </div>
-                <div class="rightitem">
-                  <p>ساعت اموزش 12</p>
-                  <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-                </div>
-              </div>
-              <div class="cost">
-                <div class="price">
-                  <p class="toman">تومان</p>
-                  <p class="num">4.800.000</p>
-                </div>
-                <h5>4.920.000</h5>
-              </div>
+  <body class="font-yekan">
+    <!-- header desktop -->
+
+    <header
+      class="h-[120px] bg-box px-extralg md:flex hidden items-center justify-between">
+      <div class="flex items-center gap-7">
+        <img
+          src="../assets/logo.png"
+          alt="ravi-hesab-logo"
+          class="w-48 h-12 object-cover" />
+
+        <!-- search bar -->
+
+        <div
+          class="bg-white relative w-[448px] h-[54px] border px-3 border-borderColor rounded-md flex items-center gap-3">
+          <!-- Dropdown Button -->
+          <button
+            id="dropdownButton"
+            class="flex items-center justify-between gap-4 border-l w-1/3 border-l-borderColor pl-2">
+            <p
+              id="dropdownText"
+              class="text-secondary text-sm text-nowrap text-ellipsis truncate">
+              بخشنامه ها
+            </p>
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt=""
+              class="pt-1 transition-transform w-4 h-4"
+              id="arrowIcon" />
+          </button>
+
+          <!-- Dropdown Menu -->
+          <div
+            id="dropdownMenu"
+            class="w-[121px] max-h-40 absolute z-30 top-14 right-0 p-2 flex flex-col gap-1.5 bg-white rounded-lg shadow-custom transform scale-y-0 origin-top transition-all duration-200 ease-in-out opacity-0">
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              همه
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              بخشنامه ها
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              دوره ها
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              مقالات
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="relative w-full">
+            <input
+              id="searchInput"
+              placeholder="دنبال چی میگردی..."
+              type="text"
+              class="placeholder:text-sm focus:ring-0 outline-none focus:outline-none w-full" />
+
+            <!-- Dropdown Search -->
+          </div>
+
+          <div
+            id="dropdownSearch"
+            class="bg-white rounded-lg min-h-32 max-h-72 shadow-custom p-3 flex-col gap-3 w-full absolute top-14 right-0 hidden">
+            <div class="flex items-center gap-1">
+              <img
+                src="../assets/document-text 1.png"
+                alt="" />
+              <p class="text-muted text-sm">بخشنامه ها</p>
             </div>
-            <div class="item">
-              <div class="photo">
-                <img src="../assets/thumbnail (4).png" alt="imagetest" />
+            <div
+              class="border-r border-borderColor pr-2 flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <img
+                  src="../assets/icons/textalign-right 1.svg"
+                  alt="" />
+                <p class="text-sm text-secondary">
+                  بخشنامه مالیاتی شماره یازده
+                </p>
               </div>
-              <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-              <div class="seconditem">
-                <div class="leftitem">
-                  <p>جواد عظیمی فرد</p>
-                  <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-                </div>
-                <div class="rightitem">
-                  <p>ساعت اموزش 12</p>
-                  <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-                </div>
-              </div>
-              <div class="cost">
-                <div class="price">
-                  <p class="toman">تومان</p>
-                  <p class="num">4.800.000</p>
-                </div>
-                <h5>4.920.000</h5>
-              </div>
-            </div>
-            <div class="item">
-              <div class="photo">
-                <img src="../assets/thumbnail (4).png" alt="imagetest" />
-              </div>
-              <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-              <div class="seconditem">
-                <div class="leftitem">
-                  <p>جواد عظیمی فرد</p>
-                  <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-                </div>
-                <div class="rightitem">
-                  <p>ساعت اموزش 12</p>
-                  <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-                </div>
-              </div>
-              <div class="cost">
-                <div class="price">
-                  <p class="toman">تومان</p>
-                  <p class="num">4.800.000</p>
-                </div>
-                <h5>4.920.000</h5>
+              <div class="flex items-center gap-2">
+                <img
+                  src="../assets/icons/textalign-right 1.svg"
+                  alt="" />
+                <p class="text-sm text-secondary">
+                  بخشنامه مالیاتی شماره یازده
+                </p>
               </div>
             </div>
           </div>
-          <div class="down">
-            <div class="item">
-              <div class="photo">
-                <img src="../assets/thumbnail (4).png" alt="imagetest" />
-              </div>
-              <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-              <div class="seconditem">
-                <div class="leftitem">
-                  <p>جواد عظیمی فرد</p>
-                  <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-                </div>
-                <div class="rightitem">
-                  <p>ساعت اموزش 12</p>
-                  <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-                </div>
-              </div>
-              <div class="cost">
-                <div class="price">
-                  <p class="toman">تومان</p>
-                  <p class="num">4.800.000</p>
-                </div>
-                <h5>4.920.000</h5>
-              </div>
-            </div>
-            <div class="item">
-              <div class="photo">
-                <img src="../assets/thumbnail (4).png" alt="imagetest" />
-              </div>
-              <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-              <div class="seconditem">
-                <div class="leftitem">
-                  <p>جواد عظیمی فرد</p>
-                  <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-                </div>
-                <div class="rightitem">
-                  <p>ساعت اموزش 12</p>
-                  <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-                </div>
-              </div>
-              <div class="cost">
-                <div class="price">
-                  <p class="toman">تومان</p>
-                  <p class="num">4.800.000</p>
-                </div>
-                <h5>4.920.000</h5>
-              </div>
-            </div>
-            <div class="item">
-              <div class="photo">
-                <img src="../assets/thumbnail (4).png" alt="imagetest" />
-              </div>
-              <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-              <div class="seconditem">
-                <div class="leftitem">
-                  <p>جواد عظیمی فرد</p>
-                  <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-                </div>
-                <div class="rightitem">
-                  <p>ساعت اموزش 12</p>
-                  <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-                </div>
-              </div>
-              <div class="cost">
-                <div class="price">
-                  <p class="toman">تومان</p>
-                  <p class="num">4.800.000</p>
-                </div>
-                <h5>4.920.000</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="right"></div> -->
-      </div>
-    </div>
-    <div class="container">
-      <div class="left">
-        <div class="up">
-          <div class="item">
-            <div class="photo">
-              <img src="../assets/thumbnail (4).png" alt="imagetest" />
-            </div>
-            <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-            <div class="seconditem">
-              <div class="leftitem">
-                <p>جواد عظیمی فرد</p>
-                <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-              </div>
-              <div class="rightitem">
-                <p>ساعت اموزش 12</p>
-                <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-              </div>
-            </div>
-            <div class="cost">
-              <div class="price">
-                <p class="toman">تومان</p>
-                <p class="num">4.800.000</p>
-              </div>
-              <h5>4.920.000</h5>
-            </div>
-          </div>
-          <div class="item">
-            <div class="photo">
-              <img src="../assets/thumbnail (4).png" alt="imagetest" />
-            </div>
-            <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-            <div class="seconditem">
-              <div class="leftitem">
-                <p>جواد عظیمی فرد</p>
-                <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-              </div>
-              <div class="rightitem">
-                <p>ساعت اموزش 12</p>
-                <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-              </div>
-            </div>
-            <div class="cost">
-              <div class="price">
-                <p class="toman">تومان</p>
-                <p class="num">4.800.000</p>
-              </div>
-              <h5>4.920.000</h5>
-            </div>
-          </div>
-          <div class="item">
-            <div class="photo">
-              <img src="../assets/thumbnail (4).png" alt="imagetest" />
-            </div>
-            <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-            <div class="seconditem">
-              <div class="leftitem">
-                <p>جواد عظیمی فرد</p>
-                <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-              </div>
-              <div class="rightitem">
-                <p>ساعت اموزش 12</p>
-                <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-              </div>
-            </div>
-            <div class="cost">
-              <div class="price">
-                <p class="toman">تومان</p>
-                <p class="num">4.800.000</p>
-              </div>
-              <h5>4.920.000</h5>
-            </div>
-          </div>
-        </div>
-        <div class="down">
-          <div class="item">
-            <div class="photo">
-              <img src="../assets/thumbnail (4).png" alt="imagetest" />
-            </div>
-            <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-            <div class="seconditem">
-              <div class="leftitem">
-                <p>جواد عظیمی فرد</p>
-                <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-              </div>
-              <div class="rightitem">
-                <p>ساعت اموزش 12</p>
-                <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-              </div>
-            </div>
-            <div class="cost">
-              <div class="price">
-                <p class="toman">تومان</p>
-                <p class="num">4.800.000</p>
-              </div>
-              <h5>4.920.000</h5>
-            </div>
-          </div>
-          <div class="item">
-            <div class="photo">
-              <img src="../assets/thumbnail (4).png" alt="imagetest" />
-            </div>
-            <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-            <div class="seconditem">
-              <div class="leftitem">
-                <p>جواد عظیمی فرد</p>
-                <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-              </div>
-              <div class="rightitem">
-                <p>ساعت اموزش 12</p>
-                <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-              </div>
-            </div>
-            <div class="cost">
-              <div class="price">
-                <p class="toman">تومان</p>
-                <p class="num">4.800.000</p>
-              </div>
-              <h5>4.920.000</h5>
-            </div>
-          </div>
-          <div class="item">
-            <div class="photo">
-              <img src="../assets/thumbnail (4).png" alt="imagetest" />
-            </div>
-            <h1 class="titr">آموزش نرم افزار های حسابداری</h1>
-            <div class="seconditem">
-              <div class="leftitem">
-                <p>جواد عظیمی فرد</p>
-                <img src="../assets/profile 2 (1).svg" alt="imagetest" />
-              </div>
-              <div class="rightitem">
-                <p>ساعت اموزش 12</p>
-                <img src="../assets/clock 2 (1).svg" alt="imagetest" />
-              </div>
-            </div>
-            <div class="cost">
-              <div class="price">
-                <p class="toman">تومان</p>
-                <p class="num">4.800.000</p>
-              </div>
-              <h5>4.920.000</h5>
-            </div>
-          </div>
+
+          <button class="absolute left-2 pr-2 bg-white">
+            <img
+              src="../assets/icons/search-normal.svg"
+              alt="search-ravi-hesab" />
+          </button>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="squareitem">
-        <div class="square">
-          <img src="../assets/arrow-left 1 (1).svg" alt="imagetest" />
-        </div>
-        <div class="square"><p class="noghte">...</p></div>
-        <div class="square"><p class="noghte">2</p></div>
-        <div class="one">1</div>
-        <div class="square">
-          <img src="../assets/arrow-right-1 3.svg" alt="imagetest" />
+
+      <div class="flex gap-7 items-center">
+        <button class="btn">ورود/ثبت نام</button>
+        <div class="flex items-center gap-2">
+          <div class="">
+            <p class="text-[15px]">09304537723</p>
+            <p class="text-nowrap text-sm text-muted mt-2">
+              مشاوره و پشتیبـانی
+            </p>
+          </div>
+          <button
+            class="w-[54px] h-[54px] flex items-center justify-center rounded-md bg-primary">
+            <img
+              src="../assets/icons/headphone.svg"
+              alt="ravi-hesab" />
+          </button>
         </div>
       </div>
+    </header>
+
+    <!-- header mobile -->
+
+    <header
+      class="flex md:hidden px-3 flex-col mt-2.5 gap-3">
+      <div class="flex px-2 items-center justify-between">
+        <div
+          id="mobile-menu-button"
+          class="w-12 cursor-pointer h-12 rounded-md border flex items-center justify-center">
+          <img
+            src="../assets/icons/hamburger-button 1.svg"
+            alt="" />
+        </div>
+
+        <img src="../assets/logo.png" class="w-28" alt="" />
+
+        <button
+          class="w-12 h-12 flex items-center justify-center rounded-md bg-white border b">
+          <img
+            src="../assets/icons/headphone 1.svg"
+            alt="ravi-hesab" />
+        </button>
+      </div>
+
+      <div
+        class="bg-box mx-3 relative h-[50px] border px-3 border-borderColor rounded-md flex items-center gap-3">
+        <!-- Dropdown Button -->
+        <button
+          id="mobileDropdownButton"
+          class="flex items-center z-20 justify-between gap-4 border-l w-1/3 border-l-borderColor pl-2">
+          <p
+            id="mobileDropdownText"
+            class="text-secondary text-sm text-nowrap text-ellipsis truncate">
+            بخشنامه ها
+          </p>
+          <img
+            src="../assets/icons/arrow-down.svg"
+            alt=""
+            class="pt-1 transition-transform w-4 h-4"
+            id="mobileArrowIcon" />
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div
+          id="mobileDropdownMenu"
+          class="w-[121px] max-h-40 absolute z-20 top-14 right-0 p-2 flex flex-col gap-1.5 bg-white rounded-lg shadow-custom transform scale-y-0 origin-top transition-all duration-200 ease-in-out opacity-0">
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            همه
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            بخشنامه ها
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            دوره ها
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            مقالات
+          </button>
+        </div>
+        <!-- search input -->
+
+        <div class="w-full relative">
+          <input
+            id="mobileSearchInput"
+            placeholder="دنبال چی میگردی..."
+            type="text"
+            class="placeholder:text-xs bg-box w-full focus:ring-0 outline-none focus:outline-none" />
+        </div>
+        <div
+          id="mobileDropdownSearch"
+          class="bg-white rounded-lg min-h-32 max-h-72 shadow-custom p-3 flex-col gap-3 w-full absolute top-[52px] right-0 hidden">
+          <div class="flex items-center gap-1">
+            <img
+              src="../assets/document-text 1.png"
+              alt="" />
+            <p class="text-muted text-sm">بخشنامه ها</p>
+          </div>
+          <div
+            class="border-r border-borderColor pr-2 flex flex-col gap-3">
+            <div class="flex items-center gap-2">
+              <img
+                src="../assets/icons/textalign-right 1.svg"
+                alt="" />
+              <p class="text-sm text-secondary">
+                بخشنامه مالیاتی شماره یازده
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img
+                src="../assets/icons/textalign-right 1.svg"
+                alt="" />
+              <p class="text-sm text-secondary">
+                بخشنامه مالیاتی شماره یازده
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="absolute left-2 pr-2 bg-box">
+          <img
+            src="../assets//icons/search-normal.svg"
+            alt="search-ravi-hesab" />
+        </button>
+      </div>
+    </header>
+
+    <!-- mobile menu -->
+
+    <menu
+      id="mobile-menu"
+      class="w-full h-screen fixed z-50 right-0 top-0 px-3 pt-5 bg-white hidden">
+      <div class="flex items-center justify-between">
+        <img src="../assets/logo.png" class="w-28" alt="" />
+        <img
+          id="close-menu-button"
+          src="../assets/icons/close-circle 2.svg"
+          class="cursor-pointer"
+          alt="" />
+      </div>
+      <div
+        class="mt-8 border-t py-2 flex flex-col gap-3 border-borderColor">
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">صفحه اصلی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">خدمات ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">ایده های نوآورانه</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">دوره های آموزشی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">خدمات ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">مطالب وبلاگ</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">کتاب ها</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">پشتیبانی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">ارتباط با ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">درباره ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+      </div>
+      <button
+        class="w-full mt-5 h-[54px] bg-secondary text-white rounded-lg">
+        ورود /ثبت نام
+      </button>
+    </menu>
+
+    <!-- menu list desktop -->
+    <div
+      class="md:flex hidden mb-10 w-full text-sm list-none items-center text-nowrap justify-center gap-5 h-[50px] border-b border-borderColor">
+      <li class="cursor-pointer">صفحه اصلی</li>
+      <li class="cursor-pointer">خدمات ما</li>
+      <li class="cursor-pointer">ایده های نوآورانه</li>
+      <li class="cursor-pointer">دوره های آموزشی</li>
+      <li class="cursor-pointer">مطالب وبلاگ</li>
+      <li class="cursor-pointer">کتاب ها</li>
+      <li class="cursor-pointer">پشتیبانی</li>
+      <li class="cursor-pointer">ارتباط با ما</li>
+      <li class="cursor-pointer">درباره ما</li>
     </div>
-    <div class="container">
-      <div class="secondsection">
-        <div class="first">
-          <h1>مزایای آشنایی با استاندارد های حسابداری</h1>
-          <p>
-            استاندارد های حسابداری شماره 1و2 دو استاندارد مهم حسابداری هستند که
-            اشنایی با انها برای حسابداران و مدیران مالی ضروری است این دوره
-            اموزشی به شما کمک میکند تا با این دو استانداردبه طور کامل <br />
-            اشنا شویدو مهارت های لازم برای تهیه و ارائه صورت های مالی و صورت
-            جریان های نقدی را کسب کنید در صورت تمایل به تسلط به امور مالی و
-            آموزش مالیات جامع شما می توانید از طریق همین سایت به قسمت <br>
-            <span class="matn">
-              مربوطه مراجعه کنید.همچنین در صورت تمایل به آموزش قوانین مالیاتی
-              جدید به قسمت مربوطه مراجعه کنید تا همیشه به روز باشید
-            </span>
+
+    <main class="md:px-extralg px-5">
+      <div
+        class="w-full bg-box px-5 md:mb-10 h-[94px] rounded-xl lg:flex hidden items-center justify-between">
+        <div class="flex items-center gap-5">
+          <p class="text-nowrap text-xl font-bold">
+            دوره های آموزشی راوی حساب
+          </p>
+
+          <div
+            class="flex text-muted hide-scrollbar whitespace-nowrap items-center md:justify-center gap-1 overflow-x-auto w-full text-xs">
+            <p class="text-nowrap">صفحه اصلی</p>
+            <div class="">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <p class="text-nowrap">دوره های آموزشی</p>
+            <div class="">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="text-nowrap">دسته بندی</p>
+            <div class="">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="text-secondary text-nowrap">
+              آموزش تهیه صورت های مالی
+            </p>
+          </div>
+        </div>
+
+        <!-- search bar -->
+
+        <div
+          class="bg-white relative w-[291px] h-[54px] border px-3 border-borderColor rounded-md flex items-center gap-3">
+          <!-- Dropdown Button -->
+
+          <!-- Search Input -->
+          <div class="relative w-full">
+            <input
+              id="searchInput"
+              placeholder="جستجوی دوره، دسته‌بندی و..."
+              type="text"
+              class="placeholder:text-sm focus:ring-0 outline-none focus:outline-none w-full" />
+
+            <!-- Dropdown Search -->
+          </div>
+
+          <button class="absolute left-2 pr-2 bg-white">
+            <img
+              src="../assets/icons/search-normal.svg"
+              alt="search-ravi-hesab" />
+          </button>
+        </div>
+      </div>
+      <!-- bread curmbs -->
+      <div
+        class="lg:hidden flex flex-col items-center justify-center w-full my-5">
+        <p class="text-[22px] font-bold mb-3">
+          دوره های آموزشی راوی حساب
+        </p>
+
+        <div
+          class="flex text-muted hide-scrollbar whitespace-nowrap items-center md:justify-center gap-1 overflow-x-auto w-full text-xs">
+          <p class="text-nowrap">صفحه اصلی</p>
+          <div class="">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                stroke="currentColor"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <p class="text-nowrap">دوره های آموزشی</p>
+          <div class="">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                stroke="currentColor"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p class="text-nowrap">دسته بندی</p>
+          <div class="">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                stroke="currentColor"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p class="text-secondary text-nowrap">
+            آموزش تهیه صورت های مالی
           </p>
         </div>
-        <div class="second">
-          <img src="../assets/arrow-left-1 7.svg" alt="imagetest" />
-          <p>مشاهده بیشتر</p>
+      </div>
+
+      <div
+        class="flex md:justify-start justify-center gap-6 w-full">
+        <!-- right side -->
+        <div
+          class="xl:flex items-center hidden flex-col gap-4 flex-shrink-0 2xl:w-80 w-60">
+          <!-- filter drop down -->
+
+          <div
+            id="filterDropdownToggle"
+            class="border cursor-pointer border-borderColor rounded-md h-[54px] w-full flex items-center justify-between px-4 relative">
+            <div
+              class="flex items-center gap-1.5 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs text-muted">
+                نمایش بر اساس
+              </p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <!-- label -->
+            <p id="filterDropdownLabel" class="text-sm">
+              جدیدترین ها
+            </p>
+
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt="" />
+
+            <!-- drop down -->
+
+            <div
+              id="filterDropdownMenu"
+              class="w-full absolute top-14 z-20 rounded-md right-0 bg-white shadow-custom hidden flex-col">
+              <button
+                data-value="جدیدترین ها"
+                class="text-secondary text-sm rounded-t-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                جدید ترین ها
+              </button>
+
+              <button
+                data-value="پربازدید ترین ها"
+                class="text-secondary text-sm h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                پربازدید ترین ها
+              </button>
+
+              <button
+                data-value="پر بحث ترین ها"
+                class="text-secondary text-sm rounded-b-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                پر بحث ترین ها
+              </button>
+            </div>
+          </div>
+
+          <!-- sort part -->
+
+          <div
+            class="border w-full max-h-96 overflow-hidden p-3 rounded-md">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-bold">
+                دسته بندی دوره ها
+              </p>
+
+              <img
+                src="../assets/icons/task 3.svg"
+                alt="" />
+            </div>
+
+            <div
+              dir="ltr"
+              class="flex flex-col pb-5 h-[87%] overflow-y-scroll p-0 pr-2 gap-3 mt-4">
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 h-full border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between pb-3 border-b border-borderColor">
+                <p class="text-muted text-sm">(121)</p>
+
+                <!-- check box -->
+                <div
+                  class="inline-flex gap-1.5 items-center">
+                  <p class="text-secondary text-sm">تستی</p>
+                  <label
+                    class="flex items-center cursor-pointer relative">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded border border-slate-300 checked:bg-primary checked:border-primary"
+                      id="check3" />
+                    <span
+                      class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1">
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- switch part -->
+          <div
+            class="w-full border border-borderColor rounded-md h-[54px] flex items-center justify-between px-3">
+            <p class="text-sm">فقط دوره های تخفیف دار</p>
+            <div class="relative inline-block w-10 h-6">
+              <input
+                id="switch-component-1"
+                type="checkbox"
+                class="peer appearance-none w-10 h-6 bg-muted rounded-full checked:bg-primary cursor-pointer transition-colors duration-300" />
+              <label
+                for="switch-component-1"
+                class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-4 peer-checked:border-slate-800 cursor-pointer">
+              </label>
+            </div>
+          </div>
+
+          <!-- filter price part -->
+
+          <div
+            class="w-full border border-borderColor rounded-md h-[54px] flex items-center justify-between px-3">
+            <p class="text-secondary font-bold text-sm">
+              فیلتر بر اساس قیمت
+            </p>
+            <img
+              src="../assets/icons/filter 1.svg"
+              alt="" />
+          </div>
+        </div>
+
+        <!-- left side -->
+        <div class="container mx-auto">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+            <div
+              class="border rounded-md md:p-4 p-2.5 flex flex-col gap-4">
+              <img
+                src="../assets/thumbnail.png"
+                class="rounded-md object-cover"
+                alt="" />
+
+              <p class="font-bold">
+                آموزش نرم افزار های حسابداری
+              </p>
+              <div
+                class="flex border-b border-dashed pb-5 items-center gap-5">
+                <div class="flex gap-1">
+                  <img src="../assets/icons/clock 2.svg" />
+                  <p class="text-muted text-xs">
+                    12 ساعت آموزش
+                  </p>
+                </div>
+
+                <div class="flex gap-1">
+                  <img
+                    src="../assets/icons/profile 2.png" />
+                  <p class="text-muted text-xs">
+                    جواد عظیمی فرد
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex h-full items-center justify-between">
+                <p class="text-muted line-through">
+                  4.9200.000
+                </p>
+                <p class="font-bold">
+                  4.800.000
+                  <span class="font-normal">تومان</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border rounded-md md:p-4 p-2.5 flex flex-col gap-4">
+              <img
+                src="../assets/thumbnail.png"
+                class="rounded-md object-cover"
+                alt="" />
+
+              <p class="font-bold">
+                آموزش نرم افزار های حسابداری
+              </p>
+              <div
+                class="flex border-b border-dashed pb-5 items-center gap-5">
+                <div class="flex gap-1">
+                  <img src="../assets/icons/clock 2.svg" />
+                  <p class="text-muted text-xs">
+                    12 ساعت آموزش
+                  </p>
+                </div>
+
+                <div class="flex gap-1">
+                  <img
+                    src="../assets/icons/profile 2.png" />
+                  <p class="text-muted text-xs">
+                    جواد عظیمی فرد
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex h-full items-center justify-between">
+                <p class="text-muted line-through">
+                  4.9200.000
+                </p>
+                <p class="font-bold">
+                  4.800.000
+                  <span class="font-normal">تومان</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border rounded-md md:p-4 p-2.5 flex flex-col gap-4">
+              <img
+                src="../assets/thumbnail.png"
+                class="rounded-md object-cover"
+                alt="" />
+
+              <p class="font-bold">
+                آموزش نرم افزار های حسابداری
+              </p>
+              <div
+                class="flex border-b border-dashed pb-5 items-center gap-5">
+                <div class="flex gap-1">
+                  <img src="../assets/icons/clock 2.svg" />
+                  <p class="text-muted text-xs">
+                    12 ساعت آموزش
+                  </p>
+                </div>
+
+                <div class="flex gap-1">
+                  <img
+                    src="../assets/icons/profile 2.png" />
+                  <p class="text-muted text-xs">
+                    جواد عظیمی فرد
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex h-full items-center justify-between">
+                <p class="text-muted line-through">
+                  4.9200.000
+                </p>
+                <p class="font-bold">
+                  4.800.000
+                  <span class="font-normal">تومان</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border rounded-md md:p-4 p-2.5 flex flex-col gap-4">
+              <img
+                src="../assets/thumbnail.png"
+                class="rounded-md object-cover"
+                alt="" />
+
+              <p class="font-bold">
+                آموزش نرم افزار های حسابداری
+              </p>
+              <div
+                class="flex border-b border-dashed pb-5 items-center gap-5">
+                <div class="flex gap-1">
+                  <img src="../assets/icons/clock 2.svg" />
+                  <p class="text-muted text-xs">
+                    12 ساعت آموزش
+                  </p>
+                </div>
+
+                <div class="flex gap-1">
+                  <img
+                    src="../assets/icons/profile 2.png" />
+                  <p class="text-muted text-xs">
+                    جواد عظیمی فرد
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex h-full items-center justify-between">
+                <p class="text-muted line-through">
+                  4.9200.000
+                </p>
+                <p class="font-bold">
+                  4.800.000
+                  <span class="font-normal">تومان</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border rounded-md md:p-4 p-2.5 flex flex-col gap-4">
+              <img
+                src="../assets/thumbnail.png"
+                class="rounded-md object-cover"
+                alt="" />
+
+              <p class="font-bold">
+                آموزش نرم افزار های حسابداری
+              </p>
+              <div
+                class="flex border-b border-dashed pb-5 items-center gap-5">
+                <div class="flex gap-1">
+                  <img src="../assets/icons/clock 2.svg" />
+                  <p class="text-muted text-xs">
+                    12 ساعت آموزش
+                  </p>
+                </div>
+
+                <div class="flex gap-1">
+                  <img
+                    src="../assets/icons/profile 2.png" />
+                  <p class="text-muted text-xs">
+                    جواد عظیمی فرد
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex h-full items-center justify-between">
+                <p class="text-muted line-through">
+                  4.9200.000
+                </p>
+                <p class="font-bold">
+                  4.800.000
+                  <span class="font-normal">تومان</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="border rounded-md md:p-4 p-2.5 flex flex-col gap-4">
+              <img
+                src="../assets/thumbnail.png"
+                class="rounded-md object-cover"
+                alt="" />
+
+              <p class="font-bold">
+                آموزش نرم افزار های حسابداری
+              </p>
+              <div
+                class="flex border-b border-dashed pb-5 items-center gap-5">
+                <div class="flex gap-1">
+                  <img src="../assets/icons/clock 2.svg" />
+                  <p class="text-muted text-xs">
+                    12 ساعت آموزش
+                  </p>
+                </div>
+
+                <div class="flex gap-1">
+                  <img
+                    src="../assets/icons/profile 2.png" />
+                  <p class="text-muted text-xs">
+                    جواد عظیمی فرد
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex h-full items-center justify-between">
+                <p class="text-muted line-through">
+                  4.9200.000
+                </p>
+                <p class="font-bold">
+                  4.800.000
+                  <span class="font-normal">تومان</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full mt-5 flex items-center justify-center gap-3">
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              <svg
+                class="rotate-180 group-hover:fill-white group-hover:stroke-white"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20.4999 12H3.66992"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              ۱
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              ۲
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              ...
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20.4999 12H3.66992"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div
+        class="w-full relative border-t mt-20 pt-7 flex flex-col gap-3">
+        <p class="text-xl font-bold">
+          مزایای آشنایی با استانداردهای حسابداری
+        </p>
+        <div
+          id="contentWrapper"
+          class="overflow-hidden transition-max-height ease-in-out">
+          <p class="text-secondary leading-9">
+            استانداردهای حسابداری شماره ۱ و ۲، دو استاندارد
+            مهم حسابداری هستند که آشنایی با آنها، برای
+            حسابداران و مدیران مالی ضروری است. این دوره
+            آموزشی، به شما کمک می‌کند تا با این دو استاندارد
+            به طور کامل آشنا شوید و مهارت‌های لازم برای تهیه
+            و ارائه صورت‌های مالی و صورت جریان‌های نقدی را
+            کسب کنید. در صورت تمایل به تسلط به امور مالیاتی
+            و آموزش مالیات جامع شما می توانید از طریق همین
+            سایت به قسمت مربوطه مراجعه کنید. همچنین در صورت
+            تمایل به آموزش قوانین مالیاتی جدید به قسمت
+            مربوطه مراجعه کنید تا همیشه به روز باشید. لورم
+            ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+            چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+            لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+            باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
+            آینده شناخت فراوان جامعه و متخصصان را می طلبد.
+          </p>
+
+          <div
+            class="bg-gradient-to-t flex items-start z-20 w-full from-white to-transparent pb-2">
+            <div
+              id="toggleButton"
+              onclick="toggleContent()"
+              class="flex items-center cursor-pointer gap-1 pt-2">
+              <p class="font-bold text-primary">
+                مشاهده بیشتر
+              </p>
+              <svg
+                id="toggleIcon"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.96005 4.47485L6.70005 7.73488C6.31505 8.11988 5.68505 8.11988 5.30005 7.73488L2.04004 4.47485"
+                  stroke="#FFBB00"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="">
+      <div class="bg-secondary md:pb-0 pt-10 w-full">
+        <!-- footer desktop  -->
+
+        <div
+          class="md:flex hidden justify-between gap-5 px-extralg">
+          <!-- access part -->
+          <div class="flex flex-col gap-3">
+            <p class="text-white text-xl font-bold">
+              دسترسی سریع
+            </p>
+            <div class="flex gap-10">
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>آموزش مالیات بر ارث</li>
+                <li>آموزش مالیات حقوق</li>
+                <li>آموزش مالیات دستگاه پوز</li>
+                <li>آموزش مالیات تراکنش بانکی</li>
+                <li>آموزش مالیات دستگاه پوز</li>
+              </ul>
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>وکیل مالیاتی</li>
+                <li>دادرسی مالیاتی</li>
+                <li>خدمات مالیاتی</li>
+                <li>بخشنامه مالیاتی</li>
+                <li>آموزش معاف از مالیات</li>
+              </ul>
+            </div>
+          </div>
+          <!-- duty part -->
+
+          <div class="flex flex-col gap-3">
+            <p class="text-white text-xl font-bold">
+              رسالت راوی حساب
+            </p>
+            <div class="flex gap-10">
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>مقررات مالیاتی</li>
+                <li>مقررات وزارت کار</li>
+                <li>مقررات گمرک</li>
+                <li>مقررات قوه قضائیه</li>
+                <li>مقررات بیمه‌ای</li>
+              </ul>
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>قوانین کشور</li>
+                <li>مقررات وزارت صنعت، معدن و تجارت</li>
+                <li>اطلاعیه های مالیاتی</li>
+                <li>بخشنامه های وزارت اقتصاد</li>
+                <li>مقررات بانک مرکزی</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- rules part -->
+
+          <div class="flex flex-col gap-3 max-w-[460px]">
+            <p class="text-white text-xl font-bold">
+              مقررات و بخشنامه ها
+            </p>
+            <div class="flex gap-10">
+              <p class="text-white">
+                رسالت موسسه خدماتی آموزشی راوی حساب بهبود و
+                ارتقا دانش مالیاتی افراد است. تیم راوی
+                حساب با نیازها و مشکلات مالیاتی افراد آشناست
+                و با ارائه آموزش‌ مالیات در فرمت های متنوع و
+                جامع، تلاش کرده تا اطلاعات و مهارت‌های لازم
+                برای مدیریت بهتر امور مالی و دستیابی به
+                بهره‌وری بیشتر را به مخاطبین عزیز انتقال
+                دهیم تا مخاطبین و مشتریان گرانقدر ما ...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer mobile -->
+
+        <div class="flex md:hidden flex-col gap-5 px-5">
+          <!-- Footer Accordion -->
+          <div class="flex flex-col gap-4">
+            <!-- Accordion Header -->
+            <div
+              class="accordion-header w-full bg-white flex items-center justify-between px-3 cursor-pointer bg-opacity-10 h-14 rounded-md text-white"
+              onclick="toggleAccordion('accessAccordion')">
+              <p class="font-bold text-lg">دسترسی سریع</p>
+              <img
+                class="arrow-icon rotate-180"
+                src="../assets/icons/arrow-white.svg"
+                alt="" />
+            </div>
+
+            <!-- Accordion Content -->
+            <div
+              id="accessAccordion"
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="flex gap-10 text-sm">
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>آموزش مالیات بر ارث</li>
+                  <li>آموزش مالیات حقوق</li>
+                  <li>آموزش مالیات دستگاه پوز</li>
+                  <li>آموزش مالیات تراکنش بانکی</li>
+                  <li>آموزش مالیات دستگاه پوز</li>
+                </ul>
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>وکیل مالیاتی</li>
+                  <li>دادرسی مالیاتی</li>
+                  <li>خدمات مالیاتی</li>
+                  <li>بخشنامه مالیاتی</li>
+                  <li>آموزش معاف از مالیات</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for the second accordion -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="accordion-header w-full bg-white flex items-center justify-between px-3 cursor-pointer bg-opacity-10 h-14 rounded-md text-white"
+              onclick="toggleAccordion('missionAccordion')">
+              <p class="font-bold text-lg">
+                رسالت راوی حساب
+              </p>
+              <img
+                class="arrow-icon rotate-180"
+                src="../assets/icons/arrow-white.svg"
+                alt="" />
+            </div>
+
+            <div
+              id="missionAccordion"
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="flex gap-10 text-sm">
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>مقررات مالیاتی</li>
+                  <li>مقررات وزارت کار</li>
+                  <li>مقررات گمرک</li>
+                  <li>مقررات قوه قضائیه</li>
+                  <li>مقررات بیمه‌ای</li>
+                </ul>
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>قوانین کشور</li>
+                  <li>مقررات وزارت صنعت، معدن و تجارت</li>
+                  <li>اطلاعیه های مالیاتی</li>
+                  <li>بخشنامه های وزارت اقتصاد</li>
+                  <li>مقررات بانک مرکزی</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white md:mx-[70px] mx-5 flex-wrap rounded-md mt-10 md:p-5 p-3 gap-3 flex items-center justify-between">
+          <!-- address -->
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border md:border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img
+                src="../assets/icons/location.svg"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                آدرس:
+              </p>
+              <p class="text-secondary text-sm">
+                تهران، خیابان شریعتی روبروی ظفر کوچه صادقیان
+                پلاک ۱
+              </p>
+            </div>
+          </div>
+          <!-- email -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img src="../assets/icons/sms.svg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                ایمیل:
+              </p>
+              <p class="text-secondary text-sm">
+                info@ravihesab.com
+              </p>
+            </div>
+          </div>
+          <!-- call -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img
+                src="../assets/icons/call-calling.svg"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                تماس:
+              </p>
+              <p class="text-secondary text-sm">
+                09304537723
+              </p>
+            </div>
+          </div>
+
+          <!-- working hour -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img src="../assets/icons/clock.svg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                ساعات کاری:
+              </p>
+              <p class="text-secondary text-sm">
+                8 صبح الی 17:30
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="md:h-[120px] p-5 mt-10 md:px-extralg bg-white bg-opacity-5 w-full text-white flex md:flex-row flex-col items-center md:justify-between justify-center gap-5">
+          <div
+            class="flex gap-3 items-center justify-center">
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img
+                class="object-cover rounded-md"
+                src="../assets/zarinpal.png"
+                alt="" />
+            </div>
+
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img
+                src="../assets/enemad 3.png"
+                alt=""
+                class="object-cover" />
+            </div>
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img src="../assets/samandehi.png" alt="" />
+            </div>
+          </div>
+          <p class="text-sm md:text-right text-center">
+            تمامی حقوق مادی و معنوی این وبسایت متعلق به راوی
+            حساب می‌باشد.
+          </p>
+          <div class="flex gap-2">
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img src="../assets/icons/x 1.svg" alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/instagram 1.svg"
+                alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/telegram 1.svg"
+                alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/facebook-tag 1.svg"
+                alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/courses.js"></script>
   </body>
 </html>
