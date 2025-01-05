@@ -728,6 +728,14 @@ video {
   right: 0.625rem;
 }
 
+.right-3 {
+  right: 0.75rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -748,8 +756,16 @@ video {
   top: 0.625rem;
 }
 
+.top-3 {
+  top: 0.75rem;
+}
+
 .top-4 {
   top: 1rem;
+}
+
+.top-6 {
+  top: 1.5rem;
 }
 
 .top-\[158px\] {
@@ -851,6 +867,10 @@ video {
 
 .mt-11 {
   margin-top: 2.75rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-16 {
@@ -1005,8 +1025,16 @@ video {
   height: 28px;
 }
 
+.h-\[294px\] {
+  height: 294px;
+}
+
 .h-\[322px\] {
   height: 322px;
+}
+
+.h-\[350px\] {
+  height: 350px;
 }
 
 .h-\[385px\] {
@@ -1229,6 +1257,10 @@ video {
   width: 200px;
 }
 
+.w-\[25\%\] {
+  width: 25%;
+}
+
 .w-\[280px\] {
   width: 280px;
 }
@@ -1291,6 +1323,10 @@ video {
 
 .w-\[70px\] {
   width: 70px;
+}
+
+.w-\[75\%\] {
+  width: 75%;
 }
 
 .w-\[75px\] {
@@ -1683,6 +1719,11 @@ video {
   border-left-color: rgb(239 239 239 / var(--tw-border-opacity, 1));
 }
 
+.bg-\[\#14ae5c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 174 92 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#2088f7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(32 136 247 / var(--tw-bg-opacity, 1));
@@ -1701,6 +1742,16 @@ video {
 .bg-\[\#FFEFEF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 239 239 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#e2f5eb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 245 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#f8f8f8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#ffc831\] {
@@ -1773,6 +1824,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -1828,6 +1884,10 @@ video {
   padding: 2.5rem;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1846,6 +1906,10 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-2 {
@@ -2054,6 +2118,10 @@ video {
   font-size: 30px;
 }
 
+.text-\[36px\] {
+  font-size: 36px;
+}
+
 .text-\[42px\] {
   font-size: 42px;
 }
@@ -2126,6 +2194,10 @@ video {
   line-height: 31px;
 }
 
+.leading-\[36px\] {
+  line-height: 36px;
+}
+
 .leading-\[40px\] {
   line-height: 40px;
 }
@@ -2144,6 +2216,11 @@ video {
 
 .leading-\[60px\] {
   line-height: 60px;
+}
+
+.text-\[\#14ae5c\] {
+  --tw-text-opacity: 1;
+  color: rgb(20 174 92 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#949494\] {
@@ -2179,6 +2256,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .line-through {
@@ -2869,6 +2950,10 @@ html {
     height: 540px;
   }
 
+  .md\:h-\[555px\] {
+    height: 555px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2897,12 +2982,24 @@ html {
     width: 121px;
   }
 
+  .md\:w-\[143px\] {
+    width: 143px;
+  }
+
   .md\:w-\[200px\] {
     width: 200px;
   }
 
   .md\:w-\[228px\] {
     width: 228px;
+  }
+
+  .md\:w-\[290px\] {
+    width: 290px;
+  }
+
+  .md\:w-\[30\%\] {
+    width: 30%;
   }
 
   .md\:w-\[312px\] {
@@ -2913,8 +3010,16 @@ html {
     width: 378px;
   }
 
+  .md\:w-\[40\%\] {
+    width: 40%;
+  }
+
   .md\:w-\[480px\] {
     width: 480px;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
   }
 
   .md\:w-\[570px\] {
@@ -2927,6 +3032,10 @@ html {
 
   .md\:w-\[64px\] {
     width: 64px;
+  }
+
+  .md\:w-\[80\%\] {
+    width: 80%;
   }
 
   .md\:w-\[832px\] {
@@ -3014,6 +3123,10 @@ html {
     gap: 1.5rem;
   }
 
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
   .md\:border {
     border-width: 1px;
   }
@@ -3034,6 +3147,18 @@ html {
 
   .md\:border-t-0 {
     border-top-width: 0px;
+  }
+
+  .md\:border-t {
+    border-top-width: 1px;
+  }
+
+  .md\:border-b {
+    border-bottom-width: 1px;
+  }
+
+  .md\:border-none {
+    border-style: none;
   }
 
   .md\:border-borderColor {
@@ -3072,6 +3197,10 @@ html {
 
   .md\:p-8 {
     padding: 2rem;
+  }
+
+  .md\:p-3 {
+    padding: 0.75rem;
   }
 
   .md\:px-0 {
@@ -3136,12 +3265,20 @@ html {
     padding-left: 0.25rem;
   }
 
+  .md\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
   .md\:pt-20 {
     padding-top: 5rem;
   }
 
   .md\:text-right {
     text-align: right;
+  }
+
+  .md\:text-end {
+    text-align: end;
   }
 
   .md\:text-2xl {
