@@ -1157,6 +1157,11 @@ video {
   height: 98px;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .h-full {
   height: 100%;
 }
@@ -1767,6 +1772,11 @@ video {
   border-style: dashed;
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
 .border-borderColor {
   --tw-border-opacity: 1;
   border-color: rgb(239 239 239 / var(--tw-border-opacity, 1));
@@ -1872,11 +1882,6 @@ video {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
-.bg-green-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
-}
-
 .bg-muted {
   --tw-bg-opacity: 1;
   background-color: rgb(148 148 148 / var(--tw-bg-opacity, 1));
@@ -1890,11 +1895,6 @@ video {
 .bg-primary_lighten {
   --tw-bg-opacity: 1;
   background-color: rgb(255 248 224 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
 }
 
 .bg-secondary {
@@ -1935,11 +1935,6 @@ video {
 .bg-yellow-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 240 138 / var(--tw-bg-opacity, 1));
-}
-
-.bg-yellow-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-0 {
@@ -3225,6 +3220,11 @@ html {
     width: auto;
   }
 
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .md\:w-full {
     width: 100%;
   }
@@ -3256,6 +3256,10 @@ html {
 
   .md\:flex-row-reverse {
     flex-direction: row-reverse;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
   }
 
   .md\:items-start {
@@ -3357,14 +3361,19 @@ html {
     }
   }
 
-  .md\:bg-white {
+  .md\:bg-\[\#f8f8f8\] {
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    background-color: rgb(248 248 248 / var(--tw-bg-opacity, 1));
   }
 
   .md\:bg-primary {
     --tw-bg-opacity: 1;
     background-color: rgb(255 187 0 / var(--tw-bg-opacity, 1));
+  }
+
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   }
 
   .md\:p-3 {
