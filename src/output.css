@@ -1887,6 +1887,11 @@ video {
   background-color: rgb(148 148 148 / var(--tw-bg-opacity, 1));
 }
 
+.bg-pink-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 231 243 / var(--tw-bg-opacity, 1));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(255 187 0 / var(--tw-bg-opacity, 1));
@@ -3286,8 +3291,16 @@ html {
     justify-content: space-between;
   }
 
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+
   .md\:gap-0 {
     gap: 0px;
+  }
+
+  .md\:gap-1 {
+    gap: 0.25rem;
   }
 
   .md\:gap-3 {
