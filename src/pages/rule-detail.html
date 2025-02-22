@@ -2,125 +2,1467 @@
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../output.css" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <title>Ravi-hesab</title>
   </head>
-  <body class="font-yekan">
-    <!-- first section -->
-    <div class="w-full flex justify-center items-center mt-10">
-      <div class="w-[80%] flex gap-10">
-        <div>
-          <img src="../assets/Frame 1000004549.png" alt="imagetest" />
-        </div>
-        <!-- <div>left section</div> -->
-      </div>
-    </div>
-    <!-- second section -->
-    <div class="w-full flex justify-center items-center mt-10">
-      <div class="w-[80%] flex gap-10">
-        <!-- lleft section -->
-        <div class="flex flex-col gap-5">
-          <div class="flex gap-1">
-            <h1 class="font-bold text-[20px]">
-              ماده1-اصطلاحات مندرج در این قانون در معانی مشروح زیر به کار می رود
-            </h1>
-          </div>
-          <div class="flex gap-1 border-b pb-5">
-            <p class="text-primary text-[15px]">الف-جرم منشا</p>
-            <p class="text-secondary text-[15px]">
-              هر رفتاری است که طبق ماده 2قانون مجازاتاسلامی مصوب 01/02/1392 جرم
-              محسوب می شود.از منظر این قانون تخلفات<br />
-              مذکور در قانون مبارزه با قاچاق کالا و ارز با اصلاحات بعدی جرم
-              محسوب می شود
+  <body class="font-yekan overflow-x-hidden">
+    <!-- header desktop -->
+
+    <header
+      class="h-[120px] bg-box px-extralg md:flex hidden items-center justify-between">
+      <div class="flex items-center gap-7">
+        <img
+          src="../assets/logo.png"
+          alt="ravi-hesab-logo"
+          class="w-48 h-12 object-cover" />
+
+        <!-- search bar -->
+
+        <div
+          class="bg-white relative w-[448px] h-[54px] border px-3 border-borderColor rounded-md flex items-center gap-3">
+          <!-- Dropdown Button -->
+          <button
+            id="dropdownButton"
+            class="flex items-center justify-between gap-4 border-l w-1/3 border-l-borderColor pl-2">
+            <p
+              id="dropdownText"
+              class="text-secondary text-sm text-nowrap text-ellipsis truncate">
+              بخشنامه ها
             </p>
-          </div>
-          <div class="flex gap-1 border-b pb-5">
-            <p class="text-primary text-[15px]">ب-مال</p>
-            <p class="text-secondary text-[15px]">
-              هر نوع دارایی اعم از مادی یا یا غیر مادی منقول یا غیر منقول مشروع
-              یا غیر مشروع و هر نوع منفعت یا امتیاز مالی و همچنین کلیه<br />
-              اسناد مبین حق اعم از کاغذی یا الکترونیکی نظیر اسناد تجاری سهام یا
-              اوراق بهادار
-            </p>
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt=""
+              class="pt-1 transition-transform w-4 h-4"
+              id="arrowIcon" />
+          </button>
+
+          <!-- Dropdown Menu -->
+          <div
+            id="dropdownMenu"
+            class="w-[121px] max-h-40 absolute z-30 top-14 right-0 p-2 flex flex-col gap-1.5 bg-white rounded-lg shadow-custom transform scale-y-0 origin-top transition-all duration-200 ease-in-out opacity-0">
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              همه
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              بخشنامه ها
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              دوره ها
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              مقالات
+            </button>
           </div>
 
-          <div class="flex gap-1 border-b pb-5">
-            <p class="text-primary text-[15px]">پ-مال حاصل از جرم</p>
-            <p class="text-secondary text-[15px]">
-              هرمالی که به طور مستقیم یا غیر مستقیم از جرم منشا به دست اید از
-              قبیل مالی که از جرائم اقتصادی و جرم تامین مالی<br />
-              تروریسم حاصل می شود همچنین مال موضوع جرم یا مالی که برای ارتکاب
-              جرم اختصاص داده شده است در حکم مال <br />به دست امده از جرم است
+          <!-- Search Input -->
+          <div class="relative w-full">
+            <input
+              id="searchInput"
+              placeholder="دنبال چی میگردی..."
+              type="text"
+              class="placeholder:text-sm focus:ring-0 outline-none focus:outline-none w-full" />
+
+            <!-- Dropdown Search -->
+          </div>
+
+          <div
+            id="dropdownSearch"
+            class="bg-white rounded-lg min-h-32 max-h-72 shadow-custom z-20 p-3 flex-col gap-3 w-full absolute top-14 right-0 hidden">
+            <div class="flex items-center gap-1">
+              <img
+                src="../assets/document-text 1.png"
+                alt="" />
+              <p class="text-muted text-sm">بخشنامه ها</p>
+            </div>
+            <div
+              class="border-r border-borderColor pr-2 flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <img
+                  src="../assets/icons/textalign-right 1.svg"
+                  alt="" />
+                <p class="text-sm text-secondary">
+                  بخشنامه مالیاتی شماره یازده
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="../assets/icons/textalign-right 1.svg"
+                  alt="" />
+                <p class="text-sm text-secondary">
+                  بخشنامه مالیاتی شماره یازده
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button class="absolute left-2 pr-2 bg-white">
+            <img
+              src="../assets/icons/search-normal.svg"
+              alt="search-ravi-hesab" />
+          </button>
+        </div>
+      </div>
+
+      <div class="flex gap-7 items-center">
+        <button class="btn">ورود/ثبت نام</button>
+        <div class="flex items-center gap-2">
+          <div class="">
+            <p class="text-[15px]">09304537723</p>
+            <p class="text-nowrap text-sm text-muted mt-2">
+              مشاوره و پشتیبـانی
             </p>
           </div>
-          <div class="flex gap-1 border-b pb-5">
-            <p class="text-primary text-[15px]">ت-اشخاص مشمول</p>
-            <p class="text-secondary text-[15px]">
-              اشخاص مذکور در مواد 5و6این قانون
+          <button
+            class="w-[54px] h-[54px] flex items-center justify-center rounded-md bg-primary">
+            <img
+              src="../assets/icons/headphone.svg"
+              alt="ravi-hesab" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- header mobile -->
+
+    <header
+      class="flex md:hidden px-3 flex-col mt-2.5 gap-3">
+      <div class="flex px-2 items-center justify-between">
+        <div
+          id="mobile-menu-button"
+          class="w-12 cursor-pointer h-12 rounded-md border flex items-center justify-center">
+          <img
+            src="../assets/icons/hamburger-button 1.svg"
+            alt="" />
+        </div>
+
+        <img src="../assets/logo.png" class="w-28" alt="" />
+
+        <button
+          class="w-12 h-12 flex items-center justify-center rounded-md bg-white border b">
+          <img
+            src="../assets/icons/headphone 1.svg"
+            alt="ravi-hesab" />
+        </button>
+      </div>
+
+      <div
+        class="bg-box mx-3 relative h-[50px] border px-3 border-borderColor rounded-md flex items-center gap-3">
+        <!-- Dropdown Button -->
+        <button
+          id="mobileDropdownButton"
+          class="flex items-center z-20 justify-between gap-4 border-l w-1/3 border-l-borderColor pl-2">
+          <p
+            id="mobileDropdownText"
+            class="text-secondary text-sm text-nowrap text-ellipsis truncate">
+            بخشنامه ها
+          </p>
+          <img
+            src="../assets/icons/arrow-down.svg"
+            alt=""
+            class="pt-1 transition-transform w-4 h-4"
+            id="mobileArrowIcon" />
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div
+          id="mobileDropdownMenu"
+          class="w-[121px] max-h-40 absolute z-20 top-14 right-0 p-2 flex flex-col gap-1.5 bg-white rounded-lg shadow-custom transform scale-y-0 origin-top transition-all duration-200 ease-in-out opacity-0">
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            همه
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            بخشنامه ها
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            دوره ها
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            مقالات
+          </button>
+        </div>
+        <!-- search input -->
+
+        <div class="w-full relative">
+          <input
+            id="mobileSearchInput"
+            placeholder="دنبال چی میگردی..."
+            type="text"
+            class="placeholder:text-xs bg-box w-full focus:ring-0 outline-none focus:outline-none" />
+        </div>
+        <div
+          id="mobileDropdownSearch"
+          class="bg-white rounded-lg min-h-32 z-20 max-h-72 shadow-custom p-3 flex-col gap-3 w-full absolute top-[52px] right-0 hidden">
+          <div class="flex items-center gap-1">
+            <img
+              src="../assets/document-text 1.png"
+              alt="" />
+            <p class="text-muted text-sm">بخشنامه ها</p>
+          </div>
+          <div
+            class="border-r border-borderColor pr-2 flex flex-col gap-3">
+            <div class="flex items-center gap-2">
+              <img
+                src="../assets/icons/textalign-right 1.svg"
+                alt="" />
+              <p class="text-sm text-secondary">
+                بخشنامه مالیاتی شماره یازده
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img
+                src="../assets/icons/textalign-right 1.svg"
+                alt="" />
+              <p class="text-sm text-secondary">
+                بخشنامه مالیاتی شماره یازده
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="absolute left-2 pr-2 bg-box">
+          <img
+            src="../assets//icons/search-normal.svg"
+            alt="search-ravi-hesab" />
+        </button>
+      </div>
+    </header>
+
+    <!-- mobile menu -->
+
+    <menu
+      id="mobile-menu"
+      class="w-full h-screen overflow-y-auto fixed z-50 right-0 top-0 px-3 py-5 bg-white hidden">
+      <div class="flex items-center justify-between">
+        <img src="../assets/logo.png" class="w-28" alt="" />
+        <img
+          id="close-menu-button"
+          src="../assets/icons/close-circle 2.svg"
+          class="cursor-pointer"
+          alt="" />
+      </div>
+      <div
+        class="mt-8 border-t py-2 flex flex-col gap-3 border-borderColor">
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">صفحه اصلی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">خدمات ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex flex-col items-center justify-between w-full border-b pb-5 border-borderColor">
+          <div
+            class="flex items-center justify-between w-full">
+            <p class="text-secondary">ایده های نوآورانه</p>
+            <img
+              src="../assets/icons/arrow-left-1 2.svg"
+              alt=""
+              class="transform transition-transform duration-300" />
+          </div>
+          <!-- item of ideas -->
+          <div
+            class="bg-box w-full rounded-xl p-3 mt-3 flex-col gap-3 max-h-0 opacity-0 hidden transition-all duration-300"
+            id="ideas-content">
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >مقررات و بخشنامه ها</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >محاسبه آنلاین مالیات و طلا</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >قوانین و استاندارد ها</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >دیکشنری مالیاتی</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >قوانین و استاندارد ها</a
+            >
+            <a class="text-[13px] pb-2">دیکشنری مالیاتی</a>
+          </div>
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">دوره های آموزشی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex flex-col items-center justify-between w-full border-b pb-5 border-borderColor">
+          <div
+            class="flex items-center justify-between w-full">
+            <p class="text-secondary">خدمات</p>
+            <img
+              src="../assets/icons/arrow-left-1 2.svg"
+              alt=""
+              class="transform transition-transform duration-300" />
+          </div>
+
+          <!-- item of services -->
+          <div
+            class="bg-box w-full rounded-xl p-3 mt-3 flex-col gap-3 max-h-0 opacity-0 hidden transition-all duration-300"
+            id="ideas-content">
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >مقررات و بخشنامه ها</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >محاسبه آنلاین مالیات و طلا</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >قوانین و استاندارد ها</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >دیکشنری مالیاتی</a
+            >
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >قوانین و استاندارد ها</a
+            >
+            <a class="text-[13px] pb-2">دیکشنری مالیاتی</a>
+          </div>
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">مطالب وبلاگ</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex flex-col items-center justify-between w-full border-b pb-5 border-borderColor">
+          <div
+            class="flex items-center justify-between w-full">
+            <p class="text-secondary">کتاب ها</p>
+            <img
+              src="../assets/icons/arrow-left-1 2.svg"
+              alt=""
+              class="transform transition-transform duration-300" />
+          </div>
+
+          <!-- books of services -->
+          <div
+            class="bg-box w-full rounded-xl p-3 mt-3 flex-col gap-3 max-h-0 opacity-0 hidden transition-all duration-300"
+            id="books-content">
+            <a
+              class="text-[13px] border-b border-borderColor pb-3"
+              >مقررات و بخشنامه ها کتاب</a
+            >
+
+            <a class="text-[13px] pb-2"
+              >دیکشنری مالیاتی کتاب</a
+            >
+          </div>
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">پشتیبانی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">ارتباط با ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">درباره ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+      </div>
+      <button
+        class="w-full mt-5 h-[54px] bg-secondary text-white rounded-lg">
+        ورود /ثبت نام
+      </button>
+    </menu>
+    <!-- Menu List Desktop -->
+    <div
+      class="md:flex hidden w-full text-sm list-none items-center text-nowrap justify-center gap-5 h-[50px] border-b border-borderColor">
+      <li class="cursor-pointer">صفحه اصلی</li>
+      <li class="cursor-pointer relative">
+        <p
+          class="dropdown-trigger"
+          data-dropdown="servicesDropdown">
+          خدمات
+        </p>
+
+        <div
+          id="servicesDropdown"
+          class="dropdown bg-white w-[300px] p-4 absolute top-8 z-40 rounded-xl border-t-2 border-primary scale-0 origin-top transition-transform duration-300">
+          <a
+            class="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+            >خدمات 1</a
+          >
+          <a
+            class="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+            >خدمات 1</a
+          >
+          <a
+            class="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+            >خدمات 1</a
+          >
+        </div>
+      </li>
+      <li class="cursor-pointer relative">
+        <p
+          class="dropdown-trigger"
+          data-dropdown="ideasDropdown">
+          ایده های نوآورانه
+        </p>
+        <!-- Dropdown Menu for Ideas -->
+        <div
+          id="ideasDropdown"
+          class="dropdown bg-white w-[672px] p-6 grid grid-cols-2 gap-9 z-40 absolute top-8 rounded-xl border-t-2 border-primary scale-0 origin-top transition-transform duration-300">
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/rule.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                مقررات و بخشنامه ها
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/gold.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                محاسبه آنلاین مالیات طلا
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/lock.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                قوانین و استاندارد ها
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/zoomer.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                دیکشنری مالیاتی
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/calc.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                محاسبه آنلاین استهلاک
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/rule.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                محاسبه آنلاین حقوق و دستمزد
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/monitor.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                اینتاکد و مالیات مشاغل
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+
+          <!-- Ideas Dropdown Card -->
+          <div class="flex w-full items-center gap-3">
+            <div
+              class="w-14 h-14 rounded-lg flex items-center justify-center border border-borderColor">
+              <img
+                src="../assets/zoomer.png"
+                class="object-cover"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="text-sm font-bold">
+                لیست شناسه کالا و خدمات
+              </p>
+              <p class="text-muted text-xs">
+                منبع کامل مقررات و بخشنامه های مالیاتی
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="cursor-pointer">دوره های آموزشی</li>
+      <li class="cursor-pointer">مطالب وبلاگ</li>
+      <li class="cursor-pointer relative">
+        <p
+          class="dropdown-trigger"
+          data-dropdown="booksDropdown">
+          کتاب ها
+        </p>
+        <!-- Dropdown Menu for Books -->
+        <div
+          id="booksDropdown"
+          class="dropdown bg-white w-[300px] p-4 absolute top-8 z-40 rounded-xl border-t-2 border-primary scale-0 origin-top transition-transform duration-300">
+          <a
+            class="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+            >کتاب 1</a
+          >
+          <a
+            class="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+            >کتاب 2</a
+          >
+          <a
+            class="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+            >کتاب 3</a
+          >
+        </div>
+      </li>
+      <li class="cursor-pointer">پشتیبانی</li>
+      <li class="cursor-pointer">ارتباط با ما</li>
+      <li class="cursor-pointer">درباره ما</li>
+    </div>
+
+    <main class="relative md:pb-20 pb-10 md:pt-10 pt-5">
+      <!-- Overlay -->
+      <div
+        id="overlay"
+        class="absolute bg-black bg-opacity-50 inset-0 w-full h-full transition-opacity duration-300 z-30 hidden"></div>
+
+      <section class="md:px-extralg px-5">
+        <div
+          class="rounded-xl flex items-center justify-center flex-col gap-4">
+          <p
+            class="text-xl font-bold md:text-2xl w-full text-center">
+            استانداردهای حسابرسی ایران
+          </p>
+          <!-- Bread Crumbs -->
+
+          <div
+            class="flex text-muted hide-scrollbar whitespace-nowrap items-center md:justify-center gap-1 overflow-x-auto w-full text-xs">
+            <p class="text-nowrap">صفحه اصلی</p>
+            <div class="">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <p class="text-nowrap">دوره های آموزشی</p>
+            <div class="">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="text-nowrap">دسته بندی</p>
+            <div class="">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="text-secondary text-nowrap">
+              آموزش تهیه صورت های مالی
             </p>
           </div>
-          <div class="flex gap-1 border-b pb-5">
-            <p class="text-primary text-[15px]">ث-مشاغل غیر مالی</p>
-            <p class="text-secondary text-[15px]">
-              مشاغلی که شاغلین ان معاملات زیادی را به صورت نقدی انجام داده و از
-              نظر پولشویی در معرض خطر قرار دارند از قبیل<br />
-              پیش فروش کنندگان مسکن یا خودرو طلافروشان صرافان فرئشندگان خودرو
-              فرش های قیمتی فروشندگان عتیقه جات<br />
-              و هر نوع محصول گران قیمت
-            </p>
+        </div>
+      </section>
+
+      <section
+        class="md:px-extralg md:py-8 py-6 px-5 grid md:grid-cols-12 grid-cols-1 gap-6 w-full">
+        <!-- right side -->
+        <div class="flex flex-col gap-6 w-full col-span-8">
+          <div
+            class="w-full md:max-h-[491px] max-h-[191px] relative rounded-xl">
+            <img
+              src="../assets/thumbnail.png"
+              class="w-full h-full object-cover rounded-xl"
+              alt="" />
+
+            <div
+              class="absolute flex right-5 md:top-1/4 top-5 md:right-16 items-start flex-col gap-3">
+              <img
+                src="../assets/logo.png"
+                class="w-1/2 md:w-full"
+                alt="" />
+              <div
+                class="bg-secondary p-3 text-white font-bold md:text-2xl text-sm">
+                <p>ماده 1 قانون مبارزه با پولشویی</p>
+              </div>
+
+              <div
+                class="bg-primary font-danstevis p-2 text-secondary font-bold text-xs md:text-2xl">
+                <p class="font-danstevis">
+                  آخرین اصلاحات: 1403/12/01
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="flex gap-1 border-b pb-5">
-            <p class="text-primary text-[15px]">ج-خدمات پایه</p>
-            <p class="text-secondary text-[15px]">
-              خدماتی است که طبق مقررات مربوطه پیش نیاز و لازمه ارائه سایر خدمات
-              توسط اشخاص مشمول می باشد و پس از ان ارباب<br />
-              رجوع به منظور اخذ خدمات مکرر و متمادی به اشخاص مشمول مراجعه می کند
+
+          <div class="flex flex-col gap-4">
+            <p
+              class="md:text-xl text-lg font-bold text-secondary">
+              ماده ۱- اصطلاحات مندرج در این قانون در معانی
+              مشروح زیر به کار می‌رود:
             </p>
+            <div class="border-b border-borderColor pb-4">
+              <p class="text-secondary leading-8">
+                <span class="text-primary"
+                  >لف- جرم منشأ:</span
+                >
+                هر رفتاری است که مطابق ماده (۲) قانون مجازات
+                اسلامی مصوب ۱۳۹۲/۰۲/۰۱ جرم محسوب شود، از
+                منظر این قانون تخلفات مذکور در قانون مبارزه
+                با قاچاق کالا و ارز با اصلاحات بعدی جرم
+                محسوب می‌شود. 
+              </p>
+            </div>
+
+            <div class="border-b border-borderColor pb-4">
+              <p class="text-secondary leading-8">
+                <span class="text-primary"
+                  >لف- جرم منشأ:</span
+                >
+                هر رفتاری است که مطابق ماده (۲) قانون مجازات
+                اسلامی مصوب ۱۳۹۲/۰۲/۰۱ جرم محسوب شود، از
+                منظر این قانون تخلفات مذکور در قانون مبارزه
+                با قاچاق کالا و ارز با اصلاحات بعدی جرم
+                محسوب می‌شود. 
+              </p>
+            </div>
+
+            <div class="border-b border-borderColor pb-4">
+              <p class="text-secondary leading-8">
+                <span class="text-primary"
+                  >لف- جرم منشأ:</span
+                >
+                هر رفتاری است که مطابق ماده (۲) قانون مجازات
+                اسلامی مصوب ۱۳۹۲/۰۲/۰۱ جرم محسوب شود، از
+                منظر این قانون تخلفات مذکور در قانون مبارزه
+                با قاچاق کالا و ارز با اصلاحات بعدی جرم
+                محسوب می‌شود. 
+              </p>
+            </div>
+
+            <div
+              class="border-b border-borderColor flex flex-col gap-4 pb-4">
+              <p class="text-secondary leading-8">
+                <span class="text-primary"
+                  >لف- جرم منشأ:</span
+                >
+                هر رفتاری است که مطابق ماده (۲) قانون مجازات
+                اسلامی مصوب ۱۳۹۲/۰۲/۰۱ جرم محسوب شود، از
+                منظر این قانون تخلفات مذکور در قانون مبارزه
+                با قاچاق کالا و ارز با اصلاحات بعدی جرم
+                محسوب می‌شود. 
+              </p>
+
+              <p class="text-muted leading-8">
+                <span class="text-primary font-bold"
+                  >۱.</span
+                >
+                هر رفتاری است که مطابق ماده (۲) قانون مجازات
+                اسلامی مصوب ۱۳۹۲/۰۲/۰۱ جرم محسوب شود، از
+                منظر این قانون تخلفات مذکور در قانون مبارزه
+                با قاچاق کالا و ارز با اصلاحات بعدی جرم
+                محسوب می‌شود. 
+              </p>
+
+              <p class="text-muted leading-8">
+                <span class="text-primary font-bold"
+                  >۲.</span
+                >
+                هر رفتاری است که مطابق ماده (۲) قانون مجازات
+                اسلامی مصوب ۱۳۹۲/۰۲/۰۱ جرم محسوب شود، از
+                منظر این قانون تخلفات مذکور در قانون مبارزه
+                با قاچاق کالا و ارز با اصلاحات بعدی جرم
+                محسوب می‌شود. 
+              </p>
+            </div>
           </div>
-          <div class="flex gap-1 border-b pb-5">
-            <p class="text-primary text-[15px]">چ-معاملات و عملیات مشکوک</p>
-            <p class="text-secondary text-[15px]">
-              معاملات و عملیات مشکوک شامل هر نوع معامله دریافت یا پرداخت مال اعم
-              از فیزیکی یا الکترونیکی یا شروع
-              <br />
-              به انهاست که بر اساس قرائن و ائضاع و احوالی مانند موارد زیر ظن
-              وقوع جرم را ایجاد می کند
-            </p>
+
+          <div class="rounded-md overflow-hidden">
+            <div
+              class="bg-primary py-4 text-center font-[800]">
+              <h1>قوانین مرتبط</h1>
+            </div>
+            <div
+              class="bg-primary_lighten flex flex-row p-2 flex-nowrap justify-between text-center">
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>1403/03/05</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full border-x">
+                <p>ماده 22 بخشنامه شماره یک</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>توضیحات مرتبط با بخشنامه شماره یک</p>
+              </div>
+            </div>
+            <div
+              class="bg-box flex flex-row p-2 flex-nowrap justify-between text-center">
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>عنوان کوتاه بخشنامه شماره یک</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full border-x">
+                <p>ماده 22 بخشنامه شماره یک</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>توضیحات مرتبط با بخشنامه شماره یک</p>
+              </div>
+            </div>
+            <div
+              class="bg-primary_lighten flex flex-row p-2 flex-nowrap justify-between text-center">
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>عنوان کوتاه بخشنامه شماره یک</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full border-x">
+                <p>ماده 22 بخشنامه شماره یک</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>توضیحات مرتبط با بخشنامه شماره یک</p>
+              </div>
+            </div>
+            <div
+              class="bg-box flex flex-row p-2 flex-nowrap justify-between text-center">
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>عنوان کوتاه بخشنامه شماره یک</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full border-x">
+                <p>ماده 22 بخشنامه شماره یک</p>
+              </div>
+              <div
+                class="p-2 text-sm leading-6 w-full h-full">
+                <p>توضیحات مرتبط با بخشنامه شماره یک</p>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-row-reverse justify-end items-center gap-3">
-            <p class="text-muted text-[14px]">
-              معاملات و عملیات مالی مربوط به ارباب رجوع که بیش از سطح فعالیت
-              مورد انتظار وی باشد
+        </div>
+
+        <!-- left side -->
+
+        <div
+          class="hidden md:flex flex-col gap-6 min-w-[425px] col-span-4">
+          <!-- Voice Player 1 -->
+          <div
+            id="voice-player-1"
+            class="flex flex-col p-5 rounded-2xl border border-borderColor items-start gap-2">
+            <p class="mb-1 font-bold md:text-xl text-base">
+              متن ماده به صورت ویس
             </p>
-            <img src="../assets/1.svg" alt="imagetest" />
+
+            <div
+              class="voice-player relative flex items-center gap-3 bg-box rounded-lg p-4 shadow-lg w-full">
+              <img
+                src="../assets/Polygon.png"
+                class="absolute -top-2 rotate-45 right-3 w-5 h-5"
+                alt="" />
+
+              <div class="flex flex-col w-full gap-1">
+                <div class="waveform w-full"></div>
+                <!-- Add Time Display -->
+                <div
+                  class="flex gap-2 justify-between w-full text-sm text-gray-600">
+                  <p class="duration text-xs text-muted">
+                    00:00:00
+                  </p>
+                  <p
+                    class="current-time text-xs text-muted">
+                    00:00:00
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between">
+                <button
+                  class="play-button bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center">
+                  <p class="pt-1">▶</p>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-row-reverse justify-end items-center gap-3">
-            <p class="text-muted text-[14px]">
-              کشف جعل اظهار کذب یا گزارش خلاف واقع از سوی مراجعان قبل یا بعد از
-              انکه معامله یا عملیات مالی صورت گیرد و نیز در زمان اخذ خدمات پایه
+
+          <!-- Voice Player 2 -->
+          <!-- <div
+            id="voice-player-2"
+            class="flex flex-col p-5 relative rounded-2xl border border-borderColor items-start gap-2">
+            <p class="mb-1 font-bold md:text-xl text-base">
+              متن ماده به صورت ویس
             </p>
-            <img src="../assets/2.svg" alt="imagetest" />
+
+            <div
+              class="voice-player relative flex items-center gap-3 bg-box rounded-lg p-4 shadow-lg w-full">
+              <img
+                src="../assets/Polygon.png"
+                class="absolute -top-2 rotate-45 right-3 w-5 h-5"
+                alt="" />
+
+              <div class="flex flex-col w-full gap-1">
+                <div class="waveform w-full"></div>
+                <div
+                  class="flex gap-2 justify-between w-full text-sm text-gray-600">
+                  <p class="duration text-xs text-muted">
+                    00:00:00
+                  </p>
+                  <p
+                    class="current-time text-xs text-muted">
+                    00:00:00
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between">
+                <button
+                  class="play-button bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center">
+                  <p class="pt-1">▶</p>
+                </button>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- moshavere -->
+
+          <div
+            class="bg-secondary_lighten rounded-md flex items-center justify-between flex-nowrap p-4">
+            <div>
+              <img
+                src="../assets/icons/Group-ravi-icon.svg"
+                alt="" />
+              <p
+                class="text-white bg-black text-sm px-[30px] mt-[30px] text-nowrap py-2 font-[700]">
+                خدمات مشاوره مالیاتی
+              </p>
+              <button
+                class="bg-primary text-white cursor-pointer w-1/2 mt-2 text-center hover:bg-primary_lighten hover:text-black transition-all duration-300">
+                <p class="inline text-[12px]">مشاهده</p>
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="inline">
+                  <path
+                    d="M10.0477 13.4377L5.93462 9.32467C5.44888 8.83893 5.44888 8.04408 5.93462 7.55834L10.0477 3.44531"
+                    stroke="currentColor"
+                    stroke-width="1.62214"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div>
+              <img src="../assets/Audit.png" alt="" />
+            </div>
           </div>
-          <div class="flex gap-3 flex-row-reverse justify-end items-center">
-            <p class="text-muted text-[14px]">
-              معاملات یا عملیات مالی که به هر ترتیب مشخص شود صوری یا ظاهری بوده
-              و مالک شخص دیگری است
-            </p>
-            <img src="../assets/3.svg" alt="imagetest" />
+          <!-- subscriptions -->
+
+          <div
+            class="flex flex-col p-3 rounded-2xl border border-borderColor items-start gap-5">
+            <div class="flex items-center gap-2 mb-3">
+              <svg
+                width="21"
+                height="27"
+                viewBox="0 0 20 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M19.4711 0.462431L0.389914 0.462431L0.389913 5.44057L0.389913 9.27128L0.389913 22.118L9.24535 22.118L9.24535 9.27128L19.4711 9.27128L19.4711 0.462431Z"
+                  fill="#FFBB00" />
+              </svg>
+
+              <p class="text-secondary font-bold text-xl">
+                اشتراک های پیشنهادی
+              </p>
+            </div>
+
+            <!-- sub card -->
+
+            <div
+              class="relative flex flex-col md:gap-5 gap-4 px-3 md:py-7 py-3 bg-white border rounded-md border-solid border-borderColor">
+              <div class="flex items-center gap-3">
+                <img
+                  src="../assets/1.png"
+                  class="object-cover pb-2"
+                  alt="" />
+                <div
+                  class="bg-primary mb-2 rounded-t-2xl rounded-l-2xl flex items-center justify-center w-14 h-8">
+                  <p class="text-secondary text-sm">ماهه</p>
+                </div>
+              </div>
+
+              <img
+                src="../assets/label.png"
+                class="object-cover w-[75px] h-[43px] absolute -left-3"
+                alt="" />
+
+              <div
+                class="w-full flex flex-wrap justify-between gap-3 mt-3 border-b pb-5">
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p
+                    class="text-secondary text-sm text-nowrap">
+                    اشتراک گزاری پیامک بخشنامه
+                  </p>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p class="text-secondary text-sm">
+                    حقوق و دستمزد
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p class="text-secondary text-sm">
+                    استهلاک
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p class="text-secondary text-sm">
+                    مشاوره مالیاتی
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between mt-3">
+                <div class="flex flex-col">
+                  <p
+                    class="text-primary font-bold md:text-3xl text-xl">
+                    ۵۰۰.۰۰۰<span
+                      class="pr-1 font-normal text-xs"
+                      >تومان</span
+                    >
+                  </p>
+                </div>
+
+                <button class="btn-outlined">
+                  خرید اشتراک
+                </button>
+              </div>
+            </div>
+
+            <!-- sub card -->
+
+            <div
+              class="relative flex flex-col md:gap-5 gap-4 px-3 md:py-7 py-3 bg-white border rounded-md border-solid border-borderColor">
+              <div class="flex items-center gap-3">
+                <img
+                  src="../assets/12.png"
+                  class="object-cover pb-2"
+                  alt="" />
+                <div
+                  class="bg-primary mb-2 rounded-t-2xl rounded-l-2xl flex items-center justify-center w-14 h-8">
+                  <p class="text-secondary text-sm">ماهه</p>
+                </div>
+              </div>
+
+              <img
+                src="../assets/label.png"
+                class="object-cover w-[75px] h-[43px] absolute -left-3"
+                alt="" />
+
+              <div
+                class="w-full flex flex-wrap justify-between gap-5 mt-3 border-b pb-5">
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p
+                    class="text-secondary text-sm text-nowrap">
+                    اشتراک گزاری پیامک بخشنامه
+                  </p>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p class="text-secondary text-sm">
+                    حقوق و دستمزد
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p class="text-secondary text-sm">
+                    استهلاک
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <img src="../assets/check 1.png" alt="" />
+                  <p class="text-secondary text-sm">
+                    مشاوره مالیاتی
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center justify-between mt-3">
+                <div class="flex flex-col">
+                  <p
+                    class="text-primary font-bold md:text-3xl text-xl">
+                    ۵۰۰.۰۰۰<span
+                      class="pr-1 font-normal text-xs"
+                      >تومان</span
+                    >
+                  </p>
+                </div>
+
+                <button class="btn-outlined">
+                  خرید اشتراک
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="flex gap-3 flex-row-reverse justify-end items-center">
-            <p class="text-muted text-[14px]">
-              معاملات یا عملیات مالی بیش از سقف مقرر در ایین نامه اجرایی این
-              قانون هرچند مراجعان قبل یا حین معامله یا عملیات مزبور اژ انجام ان
-              انصراف <br />
-              داده یا بعد از انحام ان بدون دلیل منطقی نسبت به فسخ قرارداد اقدام
-              نمایند
+        </div>
+      </section>
+    </main>
+
+    <!-- footer  -->
+
+    <footer class="">
+      <div class="bg-secondary md:pb-0 pt-10 w-full">
+        <!-- footer desktop  -->
+
+        <div
+          class="md:flex hidden justify-between gap-5 px-extralg">
+          <!-- access part -->
+          <div class="flex flex-col gap-3">
+            <p class="text-white text-xl font-bold">
+              دسترسی سریع
             </p>
-            <img src="../assets/4.svg" alt="imagetest" />
+            <div class="flex gap-10">
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>آموزش مالیات بر ارث</li>
+                <li>آموزش مالیات حقوق</li>
+                <li>آموزش مالیات دستگاه پوز</li>
+                <li>آموزش مالیات تراکنش بانکی</li>
+                <li>آموزش مالیات دستگاه پوز</li>
+              </ul>
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>وکیل مالیاتی</li>
+                <li>دادرسی مالیاتی</li>
+                <li>خدمات مالیاتی</li>
+                <li>بخشنامه مالیاتی</li>
+                <li>آموزش معاف از مالیات</li>
+              </ul>
+            </div>
+          </div>
+          <!-- duty part -->
+
+          <div class="flex flex-col gap-3">
+            <p class="text-white text-xl font-bold">
+              رسالت راوی حساب
+            </p>
+            <div class="flex gap-10">
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>مقررات مالیاتی</li>
+                <li>مقررات وزارت کار</li>
+                <li>مقررات گمرک</li>
+                <li>مقررات قوه قضائیه</li>
+                <li>مقررات بیمه‌ای</li>
+              </ul>
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>قوانین کشور</li>
+                <li>مقررات وزارت صنعت، معدن و تجارت</li>
+                <li>اطلاعیه های مالیاتی</li>
+                <li>بخشنامه های وزارت اقتصاد</li>
+                <li>مقررات بانک مرکزی</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- rules part -->
+
+          <div class="flex flex-col gap-3 max-w-[460px]">
+            <p class="text-white text-xl font-bold">
+              مقررات و بخشنامه ها
+            </p>
+            <div class="flex gap-10">
+              <p class="text-white">
+                رسالت موسسه خدماتی آموزشی راوی حساب بهبود و
+                ارتقا دانش مالیاتی افراد است. تیم راوی
+                حساب با نیازها و مشکلات مالیاتی افراد آشناست
+                و با ارائه آموزش‌ مالیات در فرمت های متنوع و
+                جامع، تلاش کرده تا اطلاعات و مهارت‌های لازم
+                برای مدیریت بهتر امور مالی و دستیابی به
+                بهره‌وری بیشتر را به مخاطبین عزیز انتقال
+                دهیم تا مخاطبین و مشتریان گرانقدر ما ...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer mobile -->
+
+        <div class="flex md:hidden flex-col gap-5 px-5">
+          <!-- Footer Accordion -->
+          <div class="flex flex-col gap-4">
+            <!-- Accordion Header -->
+            <div
+              class="accordion-header w-full bg-white flex items-center justify-between px-3 cursor-pointer bg-opacity-10 h-14 rounded-md text-white"
+              onclick="toggleAccordion('accessAccordion')">
+              <p class="font-bold text-lg">دسترسی سریع</p>
+              <img
+                class="arrow-icon rotate-180"
+                src="../assets/icons/arrow-white.svg"
+                alt="" />
+            </div>
+
+            <!-- Accordion Content -->
+            <div
+              id="accessAccordion"
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="flex gap-10 text-sm">
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>آموزش مالیات بر ارث</li>
+                  <li>آموزش مالیات حقوق</li>
+                  <li>آموزش مالیات دستگاه پوز</li>
+                  <li>آموزش مالیات تراکنش بانکی</li>
+                  <li>آموزش مالیات دستگاه پوز</li>
+                </ul>
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>وکیل مالیاتی</li>
+                  <li>دادرسی مالیاتی</li>
+                  <li>خدمات مالیاتی</li>
+                  <li>بخشنامه مالیاتی</li>
+                  <li>آموزش معاف از مالیات</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for the second accordion -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="accordion-header w-full bg-white flex items-center justify-between px-3 cursor-pointer bg-opacity-10 h-14 rounded-md text-white"
+              onclick="toggleAccordion('missionAccordion')">
+              <p class="font-bold text-lg">
+                رسالت راوی حساب
+              </p>
+              <img
+                class="arrow-icon rotate-180"
+                src="../assets/icons/arrow-white.svg"
+                alt="" />
+            </div>
+
+            <div
+              id="missionAccordion"
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="flex gap-10 text-sm">
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>مقررات مالیاتی</li>
+                  <li>مقررات وزارت کار</li>
+                  <li>مقررات گمرک</li>
+                  <li>مقررات قوه قضائیه</li>
+                  <li>مقررات بیمه‌ای</li>
+                </ul>
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>قوانین کشور</li>
+                  <li>مقررات وزارت صنعت، معدن و تجارت</li>
+                  <li>اطلاعیه های مالیاتی</li>
+                  <li>بخشنامه های وزارت اقتصاد</li>
+                  <li>مقررات بانک مرکزی</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white md:mx-[70px] mx-5 flex-wrap rounded-md mt-10 md:p-5 p-3 gap-3 flex items-center justify-between">
+          <!-- address -->
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border md:border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img
+                src="../assets/icons/location.svg"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                آدرس:
+              </p>
+              <p class="text-secondary text-sm">
+                تهران، خیابان شریعتی روبروی ظفر کوچه صادقیان
+                پلاک ۱
+              </p>
+            </div>
+          </div>
+          <!-- email -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img src="../assets/icons/sms.svg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                ایمیل:
+              </p>
+              <p class="text-secondary text-sm">
+                info@ravihesab.com
+              </p>
+            </div>
+          </div>
+          <!-- call -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img
+                src="../assets/icons/call-calling.svg"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                تماس:
+              </p>
+              <p class="text-secondary text-sm">
+                09304537723
+              </p>
+            </div>
+          </div>
+
+          <!-- working hour -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img src="../assets/icons/clock.svg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                ساعات کاری:
+              </p>
+              <p class="text-secondary text-sm">
+                8 صبح الی 17:30
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="md:h-[120px] p-5 mt-10 md:px-extralg bg-white bg-opacity-5 w-full text-white flex md:flex-row flex-col items-center md:justify-between justify-center gap-5">
+          <div
+            class="flex gap-3 items-center justify-center">
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img
+                class="object-cover rounded-md"
+                src="../assets/zarinpal.png"
+                alt="" />
+            </div>
+
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img
+                src="../assets/enemad 3.png"
+                alt=""
+                class="object-cover" />
+            </div>
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img src="../assets/samandehi.png" alt="" />
+            </div>
+          </div>
+          <p class="text-sm md:text-right text-center">
+            تمامی حقوق مادی و معنوی این وبسایت متعلق به راوی
+            حساب می‌باشد.
+          </p>
+          <div class="flex gap-2">
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img src="../assets/icons/x 1.svg" alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/instagram 1.svg"
+                alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/telegram 1.svg"
+                alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/facebook-tag 1.svg"
+                alt="" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="../js/common.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="../js/voice.js"></script>
+    <script src="../js/rules-list.js"></script>
+    <script src="../js/Subscription-collapse-text.js"></script>
   </body>
 </html>

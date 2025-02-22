@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Dashboard-main</title>
+  </head>
+  <body class="font-yekan">
+    <!-- modals -->
+
+    <!-- header mobile -->
+
+    <div
+      class="md:hidden py-2.5 border-b border-borderColor">
+      <div class="flex items-center justify-between px-5">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="rotate-180"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+            stroke="#0C0D0F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path
+            d="M20.4999 12H3.66992"
+            stroke="#0C0D0F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+
+        <p class="text-lg font-extrabold">داشبورد</p>
+
+        <div></div>
+      </div>
+    </div>
+
+    <main
+      class="mb-10 md:px-extralg px-5 mt-10 flex flex-col md:gap-10 gap-5">
+      <!-- Overlay -->
+      <div
+        id="overlay"
+        class="absolute bg-black bg-opacity-50 inset-0 w-full h-full transition-opacity duration-300 z-30 hidden"></div>
+
+      <div class="grid md:grid-cols-10 grid-cols-1 gap-6">
+        <!-- side bar -->
+
+        <div
+          class="md:flex col-span-3 h-full gap-5 flex-col hidden bg-secondary rounded-2xl py-4 px-4">
+          <!-- header side bar -->
+
+          <div
+            class="border-b pb-5 border-dashed border-white/30 flex flex-col gap-4">
+            <div
+              class="flex items-center justify-between w-full">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-16 h-16 p-2 border border-primary rounded-full">
+                  <img
+                    src="../assets/avatar (2).png"
+                    class="rounded-full bg-white object-cover"
+                    alt="" />
+                </div>
+
+                <div class="flex flex-col gap-1 text-white">
+                  <p class="font-medium">رضا جمالی</p>
+                  <p class="text-xs">09123456789</p>
+                </div>
+              </div>
+
+              <img src="../assets/edit-2.png" alt="" />
+            </div>
+
+            <div
+              class="h-10 flex items-center rounded-lg text-primary bg-[#FFF8E026] px-2 justify-between">
+              <p class="text-xs">
+                اطلاعات کاربری خود را کامل کنید
+              </p>
+
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.57 6.42999L3.5 12.5L9.57 18.57"
+                  stroke="#FFBB00"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20.5 12.5H3.67004"
+                  stroke="#FFBB00"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- side bar items  -->
+          <div
+            class="flex flex-col gap-6 pb-5 border-b border-dashed border-white/30">
+            <!-- side bar dashboard item -->
+            <a
+              href="dashboard-main.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M9.02 3.34001L3.63 7.54001C2.73 8.24001 2 9.73001 2 10.86V18.27C2 20.59 3.89 22.49 6.21 22.49H17.79C20.11 22.49 22 20.59 22 18.28V11C22 9.79001 21.19 8.24001 20.2 7.55001L14.02 3.22001C12.62 2.24001 10.37 2.29001 9.02 3.34001Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M12 18.49V15.49"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">داشبورد</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <!-- side bar user item -->
+            <a
+              href="dashboard-user.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M12 12.5C14.7614 12.5 17 10.2614 17 7.5C17 4.73858 14.7614 2.5 12 2.5C9.23858 2.5 7 4.73858 7 7.5C7 10.2614 9.23858 12.5 12 12.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M20.5899 22.5C20.5899 18.63 16.7399 15.5 11.9999 15.5C7.25991 15.5 3.40991 18.63 3.40991 22.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">اطلاعات کاربری</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar orders item -->
+            <a
+              href="dashboard-order.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M21 7.5V17.5C21 20.5 19.5 22.5 16 22.5H8C4.5 22.5 3 20.5 3 17.5V7.5C3 4.5 4.5 2.5 8 2.5H16C19.5 2.5 21 4.5 21 7.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M14.5 5V7C14.5 8.1 15.4 9 16.5 9H18.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8 13.5H12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8 17.5H16"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">سفارشات</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar payment item -->
+            <a
+              href="dashboard-payment.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 9.00496H22"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M6 17.005H8"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M10.5 17.005H14.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M6.44 4.00496H17.55C21.11 4.00496 22 4.88496 22 8.39496V16.605C22 20.115 21.11 20.995 17.56 20.995H6.44C2.89 21.005 2 20.125 2 16.615V8.39496C2 4.88496 2.89 4.00496 6.44 4.00496Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <p class="text-sm">صورتحساب ها</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar calculate online item -->
+            <a
+              href="dashboard-calculate.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.4207 6.13965H21.7007"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M2.29956 6.14014H9.57956"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M14.4207 15.8301H21.7007"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M14.4207 21.8896H21.7007"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M18.0894 9.77V2.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M2.29956 22.5L9.57956 15.23"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M9.57956 22.5L2.29956 15.23"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <p class="text-sm">محاسبات آنلاین</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar favorite item -->
+            <a
+              href="dashboard-favorite.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M12.62 21.31C12.28 21.43 11.72 21.43 11.38 21.31C8.48 20.32 2 16.19 2 9.19C2 6.1 4.49 3.6 7.56 3.6C9.38 3.6 10.99 4.48 12 5.84C13.01 4.48 14.63 3.6 16.44 3.6C19.51 3.6 22 6.1 22 9.19C22 16.19 15.52 20.32 12.62 21.31Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">علاقه مندی ها</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar ticket item -->
+            <a
+              href="dashboard-ticket.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M19.5 13C19.5 11.62 20.62 10.5 22 10.5V9.5C22 5.5 21 4.5 17 4.5H7C3 4.5 2 5.5 2 9.5V10C3.38 10 4.5 11.12 4.5 12.5C4.5 13.88 3.38 15 2 15V15.5C2 19.5 3 20.5 7 20.5H17C21 20.5 22 19.5 22 15.5C20.62 15.5 19.5 14.38 19.5 13Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M10 4.5L10 20.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="5 5" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">تیکت ها</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar subscription item -->
+            <a
+              href="dashboard-subscription.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M22 6.5V8.92C22 10.5 21 11.5 19.42 11.5H16V4.51C16 3.4 16.91 2.5 18.02 2.5C19.11 2.51 20.11 2.95 20.83 3.67C21.55 4.4 22 5.4 22 6.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M2 7.5V21.5C2 22.33 2.93998 22.8 3.59998 22.3L5.31 21.02C5.71 20.72 6.27 20.76 6.63 21.12L8.28998 22.79C8.67998 23.18 9.32002 23.18 9.71002 22.79L11.39 21.11C11.74 20.76 12.3 20.72 12.69 21.02L14.4 22.3C15.06 22.79 16 22.32 16 21.5V4.5C16 3.4 16.9 2.5 18 2.5H7H6C3 2.5 2 4.29 2 6.5V7.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M6 9.5H12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M6.75 13.5H11.25"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">اشتراک های من</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar comments item -->
+            <a
+              href="dashboard-comments.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M8.5 19.5H8C4 19.5 2 18.5 2 13.5V8.5C2 4.5 4 2.5 8 2.5H16C20 2.5 22 4.5 22 8.5V13.5C22 17.5 20 19.5 16 19.5H15.5C15.19 19.5 14.89 19.65 14.7 19.9L13.2 21.9C12.54 22.78 11.46 22.78 10.8 21.9L9.3 19.9C9.14 19.68 8.77 19.5 8.5 19.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M7 8.5H17"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M7 13.5H13"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">دیدگاه های من</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- side bar logout -->
+          <button
+            class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+            <div class="flex items-center gap-4">
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.7">
+                  <path
+                    d="M8.8999 8.05999C9.2099 4.45999 11.0599 2.98999 15.1099 2.98999H15.2399C19.7099 2.98999 21.4999 4.77999 21.4999 9.24999V15.77C21.4999 20.24 19.7099 22.03 15.2399 22.03H15.1099C11.0899 22.03 9.2399 20.58 8.9099 17.04"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M15.0001 12.5H3.62012"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M5.85 9.14999L2.5 12.5L5.85 15.85"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+              </svg>
+
+              <p class="text-sm">خروج از حساب کاربری</p>
+            </div>
+
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                stroke="currentColor"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="md:col-span-7 col-span-1 w-full flex flex-col gap-6">
+          <!-- swiper cards -->
+
+          <div class="swiper-dashboard-card-container">
+            <div class="swiper-wrapper md:px-0">
+              <div class="swiper-slide">
+                <!-- order card -->
+
+                <div
+                  class="bg-box rounded-md py-3 px-4 flex flex-col gap-2">
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M24.285 3H11.715C6.255 3 3 6.255 3 11.715V24.27C3 29.745 6.255 33 11.715 33H24.27C29.73 33 32.985 29.745 32.985 24.285V11.715C33 6.255 29.745 3 24.285 3ZM13.665 25.35C13.665 25.77 13.335 26.1 12.915 26.1H8.73C8.31 26.1 7.98 25.77 7.98 25.35V18.42C7.98 17.475 8.745 16.71 9.69 16.71H12.915C13.335 16.71 13.665 17.04 13.665 17.46V25.35ZM20.835 25.35C20.835 25.77 20.505 26.1 20.085 26.1H15.9C15.48 26.1 15.15 25.77 15.15 25.35V11.61C15.15 10.665 15.915 9.9 16.86 9.9H19.14C20.085 9.9 20.85 10.665 20.85 11.61V25.35H20.835ZM28.02 25.35C28.02 25.77 27.69 26.1 27.27 26.1H23.085C22.665 26.1 22.335 25.77 22.335 25.35V20.025C22.335 19.605 22.665 19.275 23.085 19.275H26.31C27.255 19.275 28.02 20.04 28.02 20.985V25.35Z"
+                      fill="#FFBB00" />
+                  </svg>
+
+                  <p
+                    class="text-secondary font-bold md:text-sm text-xs">
+                    حقوق و دستمزد
+                  </p>
+                  <div
+                    class="flex items-center justify-between">
+                    <p class="text-muted text-xs">
+                      1 سفارش
+                    </p>
+
+                    <div
+                      class="border border-secondary rounded-full flex items-center justify-center md:p-3 p-2 -rotate-45">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                          stroke="#0C0D0F"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M20.4999 12H3.66992"
+                          stroke="#0C0D0F"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- calculate card -->
+
+                <div
+                  class="bg-box rounded-md py-3 px-4 flex flex-col gap-2">
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18 34.1246C12 34.1246 7.125 29.8196 7.125 24.5246V18.9746C7.125 18.3596 7.635 17.8496 8.25 17.8496C8.865 17.8496 9.375 18.3596 9.375 18.9746C9.375 22.9046 13.08 25.8746 18 25.8746C22.92 25.8746 26.625 22.9046 26.625 18.9746C26.625 18.3596 27.135 17.8496 27.75 17.8496C28.365 17.8496 28.875 18.3596 28.875 18.9746V24.5246C28.875 29.8196 24 34.1246 18 34.1246ZM9.375 24.6896C9.48 28.6646 13.305 31.8746 18 31.8746C22.695 31.8746 26.52 28.6646 26.625 24.6896C24.675 26.8046 21.585 28.1246 18 28.1246C14.415 28.1246 11.34 26.8046 9.375 24.6896Z"
+                      fill="#FFBB00" />
+                    <path
+                      d="M18 20.625C13.86 20.625 10.14 18.765 8.32498 15.765C7.54498 14.49 7.125 13.005 7.125 11.475C7.125 8.895 8.28001 6.465 10.365 4.635C12.405 2.85 15.12 1.875 18 1.875C20.88 1.875 23.58 2.85 25.635 4.62C27.72 6.465 28.875 8.895 28.875 11.475C28.875 13.005 28.455 14.475 27.675 15.765C25.86 18.765 22.14 20.625 18 20.625ZM18 4.125C15.66 4.125 13.47 4.905 11.835 6.345C10.245 7.725 9.375 9.555 9.375 11.475C9.375 12.6 9.67498 13.65 10.245 14.595C11.67 16.935 14.64 18.375 18 18.375C21.36 18.375 24.33 16.92 25.755 14.595C26.34 13.65 26.625 12.6 26.625 11.475C26.625 9.555 25.755 7.725 24.15 6.315C22.515 4.905 20.34 4.125 18 4.125Z"
+                      fill="#FFBB00" />
+                    <path
+                      d="M18 28.125C11.805 28.125 7.125 24.195 7.125 18.975V11.475C7.125 6.18 12 1.875 18 1.875C20.88 1.875 23.58 2.85 25.635 4.62C27.72 6.465 28.875 8.895 28.875 11.475V18.975C28.875 24.195 24.195 28.125 18 28.125ZM18 4.125C13.245 4.125 9.375 7.425 9.375 11.475V18.975C9.375 22.905 13.08 25.875 18 25.875C22.92 25.875 26.625 22.905 26.625 18.975V11.475C26.625 9.555 25.755 7.725 24.15 6.315C22.515 4.905 20.34 4.125 18 4.125Z"
+                      fill="#FFBB00" />
+                  </svg>
+
+                  <p
+                    class="text-secondary font-bold md:text-sm text-xs">
+                    مالیات طلا
+                  </p>
+                  <div
+                    class="flex items-center justify-between">
+                    <p class="text-muted text-xs">
+                      10 محاسبه
+                    </p>
+
+                    <div
+                      class="border border-secondary rounded-full flex items-center justify-center md:p-3 p-2 -rotate-45">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                          stroke="#0C0D0F"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M20.4999 12H3.66992"
+                          stroke="#0C0D0F"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- ticket card -->
+
+                <div
+                  class="bg-box rounded-md py-3 px-4 flex flex-col gap-2">
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18 22.5C20.4853 22.5 22.5 20.4853 22.5 18C22.5 15.5147 20.4853 13.5 18 13.5C15.5147 13.5 13.5 15.5147 13.5 18C13.5 20.4853 15.5147 22.5 18 22.5Z"
+                      fill="#FFBB00" />
+                    <path
+                      d="M25.5 5.25H10.5C6 5.25 3 7.5 3 12.75V13.5V22.5V23.25C3 28.5 6 30.75 10.5 30.75H25.5C30 30.75 33 28.5 33 23.25V22.5V13.5V12.75C33 7.5 30 5.25 25.5 5.25ZM10.5 28.5C10.5 24.27 9.135 22.71 5.25 22.53V22.5V13.5V13.47C9.135 13.29 10.5 11.73 10.5 7.5H25.5C25.5 11.73 26.865 13.29 30.75 13.47V13.5V22.5V22.53C26.865 22.71 25.5 24.27 25.5 28.5H10.5Z"
+                      fill="#FFBB00" />
+                  </svg>
+
+                  <p
+                    class="text-secondary font-bold md:text-sm text-xs">
+                    استهلاک
+                  </p>
+                  <div
+                    class="flex items-center justify-between">
+                    <p class="text-muted text-xs">
+                      10 محاسبه
+                    </p>
+
+                    <div
+                      class="border border-secondary rounded-full flex items-center justify-center md:p-3 p-2 -rotate-45">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                          stroke="#0C0D0F"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M20.4999 12H3.66992"
+                          stroke="#0C0D0F"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- calculates box -->
+
+          <div
+            class="border border-borderColor rounded-lg md:p-6 p-4 flex flex-col gap-6">
+            <div
+              class="flex md:items-center justify-between md:pb-6 border-b border-borderColor">
+              <p class="md:text-xl text-sm font-bold">
+                آخرین محاسبات حقوق و دستمزد
+              </p>
+              <button
+                class="md:bg-primary bg-white md:h-[54px] h-[45px] md:px-3 md:text-white text-primary rounded-lg flex gap-3 md:items-center justify-center text-sm font-bold">
+                <p>محاسبه مجدد</p>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  class="mt-1 md:mt-0 hidden md:block"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="grid md:grid-cols-12 grid-cols-1 gap-5">
+              <div
+                class="md:border-l md:col-span-4 w-full col-span-1 border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    نحوه محاسبه
+                  </p>
+                  <p class="text-secondary">ماهانه</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    تعداد ماه
+                  </p>
+                  <p class="text-secondary">2 ماه</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    دریافت سنتوات روزانه
+                  </p>
+                  <p class="text-secondary">
+                    سنوات روزانه دریافت می کند
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="md:border-l md:col-span-4 w-full col-span-1 border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    مزد روزانه (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    2,388,728 ریال
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    کارکرد روزانه
+                  </p>
+                  <p class="text-secondary">30 روز</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    عیدی و پاداش
+                  </p>
+                  <p class="text-secondary">
+                    عیدی و پاداش دریافت می کند
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="md:col-span-4 w-full col-span-1 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    قسط وام یا سایر اقساط (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    4,500,000 میلیون تومان
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    قسط وام یا سایر اقساط (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    4,500,000 میلیون تومان
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    دریافت سنتوات روزانه
+                  </p>
+                  <p class="text-secondary">
+                    سنوات روزانه دریافت می کند
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-end">
+              <button
+                class="border border-secondary font-bold rounded-lg h-[54px] px-5 md:w-auto w-full">
+                دانلود محاسبه
+              </button>
+            </div>
+          </div>
+
+          <!-- calculates box -->
+
+          <div
+            class="border border-borderColor rounded-lg md:p-6 p-4 flex flex-col gap-6">
+            <div
+              class="flex md:items-center justify-between md:pb-6 border-b border-borderColor">
+              <p class="md:text-xl text-sm font-bold">
+                آخرین محاسبات مالیات طلا
+              </p>
+              <button
+                class="md:bg-primary bg-white md:h-[54px] h-[45px] md:px-3 md:text-white text-primary rounded-lg flex gap-3 md:items-center justify-center text-sm font-bold">
+                <p>محاسبه کامل</p>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  class="mt-1 md:mt-0 hidden md:block"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="grid md:grid-cols-12 grid-cols-1 gap-5">
+              <div
+                class="md:border-l md:col-span-4 w-full col-span-1 border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    نحوه محاسبه
+                  </p>
+                  <p class="text-secondary">ماهانه</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    تعداد ماه
+                  </p>
+                  <p class="text-secondary">2 ماه</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    دریافت سنتوات روزانه
+                  </p>
+                  <p class="text-secondary">
+                    سنوات روزانه دریافت می کند
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="md:border-l md:col-span-4 w-full col-span-1 border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    مزد روزانه (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    2,388,728 ریال
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    کارکرد روزانه
+                  </p>
+                  <p class="text-secondary">30 روز</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    عیدی و پاداش
+                  </p>
+                  <p class="text-secondary">
+                    عیدی و پاداش دریافت می کند
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="md:col-span-4 w-full col-span-1 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    قسط وام یا سایر اقساط (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    4,500,000 میلیون تومان
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    قسط وام یا سایر اقساط (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    4,500,000 میلیون تومان
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    دریافت سنتوات روزانه
+                  </p>
+                  <p class="text-secondary">
+                    سنوات روزانه دریافت می کند
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="flex items-center justify-end">
+              <button
+                class="border border-secondary font-bold rounded-lg h-[54px] px-5 md:w-auto w-full">
+                دانلود محاسبه
+              </button>
+            </div> -->
+          </div>
+
+          <!-- calculates box -->
+
+          <div
+            class="border border-borderColor rounded-lg md:p-6 p-4 flex flex-col gap-6">
+            <div
+              class="flex md:items-center justify-between md:pb-6 border-b border-borderColor">
+              <p class="md:text-xl text-sm font-bold">
+                آخرین محاسبات استهلاک
+              </p>
+              <button
+                class="md:bg-primary bg-white md:h-[54px] h-[45px] md:px-3 md:text-white text-primary rounded-lg flex gap-3 md:items-center justify-center text-sm font-bold">
+                <p>محاسبه کامل</p>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  class="mt-1 md:mt-0 hidden md:block"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="grid md:grid-cols-12 grid-cols-1 gap-5">
+              <div
+                class="md:border-l md:col-span-4 w-full col-span-1 border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    نحوه محاسبه
+                  </p>
+                  <p class="text-secondary">ماهانه</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    تعداد ماه
+                  </p>
+                  <p class="text-secondary">2 ماه</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    دریافت سنتوات روزانه
+                  </p>
+                  <p class="text-secondary">
+                    سنوات روزانه دریافت می کند
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="md:border-l md:col-span-4 w-full col-span-1 border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    مزد روزانه (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    2,388,728 ریال
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    کارکرد روزانه
+                  </p>
+                  <p class="text-secondary">30 روز</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    عیدی و پاداش
+                  </p>
+                  <p class="text-secondary">
+                    عیدی و پاداش دریافت می کند
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="md:col-span-4 w-full col-span-1 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    قسط وام یا سایر اقساط (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    4,500,000 میلیون تومان
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    قسط وام یا سایر اقساط (ریال)
+                  </p>
+                  <p class="text-secondary">
+                    4,500,000 میلیون تومان
+                  </p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    دریافت سنتوات روزانه
+                  </p>
+                  <p class="text-secondary">
+                    سنوات روزانه دریافت می کند
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="flex items-center justify-end">
+              <button
+                class="border border-secondary font-bold rounded-lg h-[54px] px-5 md:w-auto w-full">
+                دانلود محاسبه
+              </button>
+            </div> -->
+          </div>
+
+          <!-- pagination -->
+          <div
+            class="w-full mt-5 flex items-center justify-center gap-3">
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              <svg
+                class="rotate-180 group-hover:fill-white group-hover:stroke-white"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20.4999 12H3.66992"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              ۱
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              ۲
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              ...
+            </button>
+
+            <button
+              class="border text-lg font-bold rounded-md w-12 h-12 flex items-center justify-center bg-white hover:bg-primary transition-all text-secondary hover:text-white">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20.4999 12H3.66992"
+                  stroke="#949494"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/dashboard/dashboard-main.js"></script>
+  </body>
+</html>

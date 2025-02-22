@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../output.css" />
+
+    <title>Dashboard-user</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+  </head>
+  <body class="font-yekan">
+    <!-- modals -->
+
+    <!-- header mobile -->
+
+    <div
+      class="md:hidden py-2.5 border-b border-borderColor">
+      <div class="flex items-center justify-between px-5">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="rotate-180"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
+            stroke="#0C0D0F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path
+            d="M20.4999 12H3.66992"
+            stroke="#0C0D0F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+
+        <p class="text-lg font-extrabold">اطلاعات کاربری</p>
+
+        <div></div>
+      </div>
+    </div>
+
+    <main
+      class="mb-10 md:px-extralg px-5 mt-10 flex flex-col md:gap-10 gap-5">
+      <!-- Overlay -->
+      <div
+        id="overlay"
+        class="absolute bg-black bg-opacity-50 inset-0 w-full h-full transition-opacity duration-300 z-30 hidden"></div>
+
+      <div class="grid md:grid-cols-10 grid-cols-1 gap-6">
+        <!-- side bar -->
+
+        <div
+          class="md:flex col-span-3 h-full gap-5 flex-col hidden bg-secondary rounded-2xl py-4 px-4">
+          <!-- header side bar -->
+
+          <div
+            class="border-b pb-5 border-dashed border-white/30 flex flex-col gap-4">
+            <div
+              class="flex items-center justify-between w-full">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-16 h-16 p-2 border border-primary rounded-full">
+                  <img
+                    src="../assets/avatar (2).png"
+                    class="rounded-full bg-white object-cover"
+                    alt="" />
+                </div>
+
+                <div class="flex flex-col gap-1 text-white">
+                  <p class="font-medium">رضا جمالی</p>
+                  <p class="text-xs">09123456789</p>
+                </div>
+              </div>
+
+              <img src="../assets/edit-2.png" alt="" />
+            </div>
+
+            <div
+              class="h-10 flex items-center rounded-lg text-primary bg-[#FFF8E026] px-2 justify-between">
+              <p class="text-xs">
+                اطلاعات کاربری خود را کامل کنید
+              </p>
+
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.57 6.42999L3.5 12.5L9.57 18.57"
+                  stroke="#FFBB00"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20.5 12.5H3.67004"
+                  stroke="#FFBB00"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- side bar items  -->
+          <div
+            class="flex flex-col gap-6 pb-5 border-b border-dashed border-white/30">
+            <!-- side bar dashboard item -->
+            <a
+              href="dashboard-main.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M9.02 3.34001L3.63 7.54001C2.73 8.24001 2 9.73001 2 10.86V18.27C2 20.59 3.89 22.49 6.21 22.49H17.79C20.11 22.49 22 20.59 22 18.28V11C22 9.79001 21.19 8.24001 20.2 7.55001L14.02 3.22001C12.62 2.24001 10.37 2.29001 9.02 3.34001Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M12 18.49V15.49"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">داشبورد</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <!-- side bar user item -->
+            <a
+              href="dashboard-user.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M12 12.5C14.7614 12.5 17 10.2614 17 7.5C17 4.73858 14.7614 2.5 12 2.5C9.23858 2.5 7 4.73858 7 7.5C7 10.2614 9.23858 12.5 12 12.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M20.5899 22.5C20.5899 18.63 16.7399 15.5 11.9999 15.5C7.25991 15.5 3.40991 18.63 3.40991 22.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">اطلاعات کاربری</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar orders item -->
+            <a
+              href="dashboard-order.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M21 7.5V17.5C21 20.5 19.5 22.5 16 22.5H8C4.5 22.5 3 20.5 3 17.5V7.5C3 4.5 4.5 2.5 8 2.5H16C19.5 2.5 21 4.5 21 7.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M14.5 5V7C14.5 8.1 15.4 9 16.5 9H18.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8 13.5H12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8 17.5H16"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">سفارشات</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar payment item -->
+            <a
+              href="dashboard-payment.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 9.00496H22"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M6 17.005H8"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M10.5 17.005H14.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M6.44 4.00496H17.55C21.11 4.00496 22 4.88496 22 8.39496V16.605C22 20.115 21.11 20.995 17.56 20.995H6.44C2.89 21.005 2 20.125 2 16.615V8.39496C2 4.88496 2.89 4.00496 6.44 4.00496Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <p class="text-sm">صورتحساب ها</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar calculate online item -->
+            <a
+              href="dashboard-calculate.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.4207 6.13965H21.7007"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M2.29956 6.14014H9.57956"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M14.4207 15.8301H21.7007"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M14.4207 21.8896H21.7007"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M18.0894 9.77V2.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M2.29956 22.5L9.57956 15.23"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M9.57956 22.5L2.29956 15.23"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <p class="text-sm">محاسبات آنلاین</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar favorite item -->
+            <a
+              href="dashboard-favorite.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M12.62 21.31C12.28 21.43 11.72 21.43 11.38 21.31C8.48 20.32 2 16.19 2 9.19C2 6.1 4.49 3.6 7.56 3.6C9.38 3.6 10.99 4.48 12 5.84C13.01 4.48 14.63 3.6 16.44 3.6C19.51 3.6 22 6.1 22 9.19C22 16.19 15.52 20.32 12.62 21.31Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">علاقه مندی ها</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar ticket item -->
+            <a
+              href="dashboard-ticket.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M19.5 13C19.5 11.62 20.62 10.5 22 10.5V9.5C22 5.5 21 4.5 17 4.5H7C3 4.5 2 5.5 2 9.5V10C3.38 10 4.5 11.12 4.5 12.5C4.5 13.88 3.38 15 2 15V15.5C2 19.5 3 20.5 7 20.5H17C21 20.5 22 19.5 22 15.5C20.62 15.5 19.5 14.38 19.5 13Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M10 4.5L10 20.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="5 5" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">تیکت ها</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar subscription item -->
+            <a
+              href="dashboard-subscription.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M22 6.5V8.92C22 10.5 21 11.5 19.42 11.5H16V4.51C16 3.4 16.91 2.5 18.02 2.5C19.11 2.51 20.11 2.95 20.83 3.67C21.55 4.4 22 5.4 22 6.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M2 7.5V21.5C2 22.33 2.93998 22.8 3.59998 22.3L5.31 21.02C5.71 20.72 6.27 20.76 6.63 21.12L8.28998 22.79C8.67998 23.18 9.32002 23.18 9.71002 22.79L11.39 21.11C11.74 20.76 12.3 20.72 12.69 21.02L14.4 22.3C15.06 22.79 16 22.32 16 21.5V4.5C16 3.4 16.9 2.5 18 2.5H7H6C3 2.5 2 4.29 2 6.5V7.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M6 9.5H12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M6.75 13.5H11.25"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">اشتراک های من</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+
+            <!-- side bar comments item -->
+            <a
+              href="dashboard-comments.html"
+              class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+              <div class="flex items-center gap-4">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.7">
+                    <path
+                      d="M8.5 19.5H8C4 19.5 2 18.5 2 13.5V8.5C2 4.5 4 2.5 8 2.5H16C20 2.5 22 4.5 22 8.5V13.5C22 17.5 20 19.5 16 19.5H15.5C15.19 19.5 14.89 19.65 14.7 19.9L13.2 21.9C12.54 22.78 11.46 22.78 10.8 21.9L9.3 19.9C9.14 19.68 8.77 19.5 8.5 19.5Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M7 8.5H17"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M7 13.5H13"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                </svg>
+
+                <p class="text-sm">دیدگاه های من</p>
+              </div>
+
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- side bar logout -->
+          <button
+            class="sidebar-item h-12 flex px-2 items-center justify-between hover:bg-[#FFF8E026] rounded-lg hover:text-primary hover:font-bold text-white">
+            <div class="flex items-center gap-4">
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.7">
+                  <path
+                    d="M8.8999 8.05999C9.2099 4.45999 11.0599 2.98999 15.1099 2.98999H15.2399C19.7099 2.98999 21.4999 4.77999 21.4999 9.24999V15.77C21.4999 20.24 19.7099 22.03 15.2399 22.03H15.1099C11.0899 22.03 9.2399 20.58 8.9099 17.04"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M15.0001 12.5H3.62012"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M5.85 9.14999L2.5 12.5L5.85 15.85"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+              </svg>
+
+              <p class="text-sm">خروج از حساب کاربری</p>
+            </div>
+
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.7496 11.62L4.94625 7.81668C4.49708 7.36752 4.49708 6.63252 4.94625 6.18335L8.7496 2.38"
+                stroke="currentColor"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="md:col-span-7 col-span-1 w-full flex flex-col gap-6">
+          <!-- user info box -->
+
+          <div
+            class="border border-borderColor rounded-lg md:p-6 p-4 flex flex-col gap-6">
+            <div
+              class="flex md:items-center justify-between md:pb-6 border-b border-borderColor">
+              <p class="md:text-xl text-sm font-bold">
+                اطلاعات کاربری
+              </p>
+              <button
+                data-modal="edit-user-modal"
+                class="md:bg-primary openModalButton bg-white md:h-[54px] h-[45px] px-3 md:text-white text-primary rounded-lg flex md:items-center justify-center gap-2 text-sm font-bold">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  class="md:block hidden"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.2601 4.1L5.0501 12.79C4.7401 13.12 4.4401 13.77 4.3801 14.22L4.0101 17.46C3.8801 18.63 4.7201 19.43 5.8801 19.23L9.1001 18.68C9.5501 18.6 10.1801 18.27 10.4901 17.93L18.7001 9.24C20.1201 7.74 20.7601 6.03 18.5501 3.94C16.3501 1.87 14.6801 2.6 13.2601 4.1Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M11.8899 5.54999C12.3199 8.30999 14.5599 10.42 17.3399 10.7"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M3 22.5H21"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <p>ویرایش</p>
+              </button>
+            </div>
+
+            <div
+              class="grid md:grid-cols-2 grid-cols-1 gap-5">
+              <div
+                class="md:border-l w-full border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    نام و نام خانوادگی :
+                  </p>
+                  <p class="text-secondary">رضا جنتی</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">شغل</p>
+                  <p class="text-secondary">محصل</p>
+                </div>
+              </div>
+
+              <div
+                class="w-full border-l-0 flex flex-col md:gap-6 gap-8">
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    شماره موبایل :
+                  </p>
+                  <p class="text-secondary">09123456789</p>
+                </div>
+
+                <div
+                  class="flex md:flex-col flex-row md:justify-start justify-between md:items-start gap-2 items-center">
+                  <p class="text-xs text-muted">
+                    تاریخ تولد :
+                  </p>
+                  <p class="text-secondary">
+                    1381 /04 / 12
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- user address -->
+
+          <div
+            class="border border-borderColor rounded-lg md:p-6 p-4 flex flex-col gap-6">
+            <div
+              class="flex md:items-center justify-between md:pb-6 border-b border-borderColor">
+              <p class="md:text-xl text-sm font-bold">
+                لیست آدرس ها
+              </p>
+              <button
+                data-modal="add-location-modal"
+                class="md:bg-primary openModalButton bg-white md:h-[54px] h-[45px] px-3 md:text-white text-primary rounded-lg flex md:items-center justify-center gap-2 text-sm font-bold">
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  class="md:block hidden"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.75 11.5H17.25"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M11.5 17.25V5.75"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+                <p>افزودن آدرس جدید</p>
+              </button>
+            </div>
+
+            <div class="flex flex-col gap-5">
+              <div
+                class="flex md:flex-row flex-col-reverse md:items-center md:justify-between gap-6">
+                <div
+                  class="flex md:justify-start justify-between md:items-center gap-5">
+                  <p
+                    class="md:hidden block text-sm text-muted">
+                    آدرس
+                  </p>
+                  <div class="flex gap-1 items-center">
+                    <svg
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                      class="md:block hidden"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.99978 11.6921C11.4357 11.6921 12.5998 10.528 12.5998 9.09211C12.5998 7.65617 11.4357 6.49211 9.99978 6.49211C8.56384 6.49211 7.39978 7.65617 7.39978 9.09211C7.39978 10.528 8.56384 11.6921 9.99978 11.6921Z"
+                        stroke="#0C0D0F"
+                        stroke-width="1.25" />
+                      <path
+                        d="M3.01675 7.57541C4.65842 0.358745 15.3501 0.367078 16.9834 7.58374C17.9418 11.8171 15.3084 15.4004 13.0001 17.6171C11.3251 19.2337 8.67508 19.2337 6.99175 17.6171C4.69175 15.4004 2.05842 11.8087 3.01675 7.57541Z"
+                        stroke="#0C0D0F"
+                        stroke-width="1.25" />
+                    </svg>
+
+                    <p
+                      class="text-sm text-secondary leading-5 md:text-start text-end">
+                      تهران، خیابان ولیعصر، منطقه ۱۲، بلوار
+                      کاوه، کوچه ابوذر، پلاک ۱۵
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center h-[46px] gap-2 md:justify-start justify-end">
+                  <button
+                    data-modal="edit-location-modal"
+                    class="md:px-4 openModalButton text-sm flex h-full items-center gap-1 px-2 md:border border-borderColor rounded-lg">
+                    <svg
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8.83982 2.90088L3.36649 8.69421C3.15982 8.91421 2.95982 9.34755 2.91982 9.64755L2.67315 11.8075C2.58649 12.5875 3.14649 13.1209 3.91982 12.9875L6.06649 12.6209C6.36649 12.5675 6.78649 12.3475 6.99315 12.1209L12.4665 6.32755C13.4132 5.32755 13.8398 4.18755 12.3665 2.79421C10.8998 1.41421 9.78649 1.90088 8.83982 2.90088Z"
+                        stroke="#0C0D0F"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M7.92651 3.86727C8.21318 5.70727 9.70651 7.11394 11.5598 7.3006"
+                        stroke="#0C0D0F"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    <p>ویرایش</p>
+                  </button>
+                  <button
+                    class="md:px-4 text-sm flex text-danger h-full items-center gap-1 px-2">
+                    <svg
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.0002 4.4869C11.7802 4.2669 9.54691 4.15357 7.32024 4.15357C6.00024 4.15357 4.68024 4.22023 3.36024 4.35357L2.00024 4.4869"
+                        stroke="#FF3431"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M5.66675 3.81326L5.81341 2.93992C5.92008 2.30659 6.00008 1.83326 7.12675 1.83326H8.87341C10.0001 1.83326 10.0867 2.33326 10.1867 2.94659L10.3334 3.81326"
+                        stroke="#FF3431"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M12.5667 6.59302L12.1334 13.3064C12.06 14.353 12 15.1664 10.14 15.1664H5.86002C4.00002 15.1664 3.94002 14.353 3.86668 13.3064L3.43335 6.59302"
+                        stroke="#FF3431"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M6.88696 11.4999H9.10696"
+                        stroke="#FF3431"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M6.3335 8.83326H9.66683"
+                        stroke="#FF3431"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    <p>حذف</p>
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="flex md:flex-row flex-col gap-5 md:gap-3">
+                <div
+                  class="md:bg-box rounded-lg md:px-2 md:py-1 flex items-center md:justify-center justify-between text-sm text-secondary">
+                  <p>استان:</p>
+                  <p>تهران</p>
+                </div>
+
+                <div
+                  class="md:bg-box rounded-lg md:px-2 md:py-1 flex items-center md:justify-center justify-between text-sm text-secondary">
+                  <p>شهر:</p>
+                  <p>تهران</p>
+                </div>
+
+                <div
+                  class="md:bg-box rounded-lg md:px-2 md:py-1 flex items-center md:justify-center justify-between text-sm text-secondary">
+                  <p>شماره تماس:</p>
+                  <p>09182532734</p>
+                </div>
+
+                <div
+                  class="md:bg-box rounded-lg md:px-2 md:py-1 flex items-center md:justify-center justify-between text-sm text-secondary">
+                  <p>کد پستی:</p>
+                  <p>3919856324</p>
+                </div>
+
+                <div
+                  class="md:bg-box rounded-lg md:px-2 md:py-1 flex items-center md:justify-center justify-between text-sm text-secondary">
+                  <p>گیرنده:</p>
+                  <p>رضا نجفی</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- user password -->
+
+          <div
+            class="border border-borderColor rounded-lg md:p-6 p-4 flex flex-col gap-6">
+            <div
+              class="flex md:items-center justify-between pb-6 border-b border-borderColor">
+              <p class="md:text-xl text-sm font-bold">
+                تنظیمات رمز عبور
+              </p>
+            </div>
+
+            <div
+              class="grid md:grid-cols-10 grid-cols-1 mt-3 gap-6">
+              <div class="md:col-span-4 col-span-1">
+                <div class="relative">
+                  <!-- label -->
+                  <div
+                    class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+                    <div
+                      class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+                    <p class="text-xs">رمز عبور فعلی</p>
+                    <div
+                      class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+                  </div>
+
+                  <input
+                    placeholder="رمز عبور فعلی"
+                    type="password"
+                    class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full rounded-md" />
+                </div>
+              </div>
+              <div class="md:col-span-4 col-span-1">
+                <div class="relative">
+                  <!-- label -->
+                  <div
+                    class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+                    <div
+                      class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+                    <p class="text-xs">رمز عبور جدید</p>
+                    <div
+                      class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+                  </div>
+
+                  <input
+                    placeholder="رمز عبور جدید"
+                    type="password"
+                    class="bg-white border w-full px-3 placeholder:text-xs border-borderColor h-[54px] rounded-md" />
+                </div>
+              </div>
+              <button
+                class="md:col-span-2 font-bold rounded-lg text-white col-span-1 h-[54px] bg-primary">
+                تایید رمز عبور جدید
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- modals -->
+
+    <!-- edit user detail modal -->
+
+    <div
+      id="edit-user-modal"
+      class="fixed top-0 left-0 h-screen bg-black bg-opacity-50 w-full z-50 hidden items-center justify-center">
+      <div
+        class="bg-white md:w-2/4 overflow-y-auto w-5/6 md:p-6 p-3 flex flex-col gap-6 rounded-xl">
+        <p class="md:text-2xl font-bold mb-2 mb-2">
+          ویرایش اطلاعات کاربری
+        </p>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">نام و نام خانوادگی</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="نام و نام خانوادگی..."
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">شماره تماس گیرنده</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="شماره تماس گیرنده..."
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">شغل</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="شغل..."
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+
+          <div class="relative w-full h-[54px]">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 absolute right-6 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">تاریخ تولد</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <div
+              class="flex bg-white h-[54px] border px-3 rounded-md border-borderColor">
+              <input
+                data-jdp
+                data-jdp-only-date
+                placeholder="مثلا: 1403/12/12"
+                class="fromDate text-xs placeholder:text-xs w-full px-2 inline outline-none" />
+              <img
+                class="w-6"
+                src="../assets/icons/calendar 1.svg"
+                alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">آدرس</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : تهران ، خیابان فرشته"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">کد پستی</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : 39198545278"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">پلاک</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : پلاک 10"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+          <div class="w-full hidden md:block"></div>
+        </div>
+
+        <button
+          class="bg-primary text-white h-[54px] rounded-lg w-full">
+          ویرایش آدرس
+        </button>
+      </div>
+    </div>
+
+    <!-- add user location modal -->
+
+    <div
+      id="add-location-modal"
+      class="fixed top-0 left-0 h-screen bg-black bg-opacity-50 w-full z-50 hidden items-center justify-center">
+      <div
+        class="bg-white md:w-2/4 overflow-y-auto w-5/6 md:p-6 p-3 flex flex-col gap-6 rounded-xl">
+        <p class="md:text-2xl font-bold mb-2">
+          افزودن آدرس جدید
+        </p>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">نام و نام خانوادگی</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="نام و نام خانوادگی..."
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">شماره تماس گیرنده</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="شماره تماس گیرنده..."
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div
+            class="bg-white dropdown-toggle border cursor-pointer border-borderColor rounded-md h-[54px] w-full flex items-center justify-between px-4 relative">
+            <div
+              class="flex items-center gap-1.5 absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs bg-opacity-0">استان</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <!-- label -->
+            <p class="text-sm dropdown-label text-muted">
+              انتخاب کنید
+            </p>
+
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt="" />
+
+            <!-- drop down -->
+
+            <div
+              class="w-full dropdown-items absolute top-14 z-20 rounded-md right-0 bg-white shadow-custom hidden flex-col">
+              <button
+                data-value="جدیدترین ها"
+                class="text-secondary text-sm rounded-t-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                جدید ترین ها
+              </button>
+
+              <button
+                data-value="پربازدید ترین ها"
+                class="text-secondary text-sm h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                پربازدید ترین ها
+              </button>
+
+              <button
+                data-value="پر بحث ترین ها"
+                class="text-secondary text-sm rounded-b-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                پر بحث ترین ها
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white dropdown-toggle border cursor-pointer border-borderColor rounded-md h-[54px] w-full flex items-center justify-between px-4 relative">
+            <div
+              class="flex items-center gap-1.5 absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs bg-opacity-0">شهر</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <!-- label -->
+            <p class="text-sm dropdown-label text-muted">
+              انتخاب کنید
+            </p>
+
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt="" />
+
+            <!-- drop down -->
+
+            <div
+              class="w-full dropdown-items absolute top-14 z-20 rounded-md right-0 bg-white shadow-custom hidden flex-col">
+              <button
+                data-value="تهران"
+                class="text-secondary text-sm rounded-t-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                تهران
+              </button>
+
+              <button
+                data-value="اراک"
+                class="text-secondary text-sm h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                اراک
+              </button>
+
+              <button
+                data-value="قم"
+                class="text-secondary text-sm rounded-b-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                قم
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">آدرس</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : تهران ، خیابان فرشته"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">کد پستی</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : 39198545278"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">پلاک</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : پلاک 10"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+          <div class="w-full hidden md:block"></div>
+        </div>
+
+        <button
+          class="bg-primary text-white h-[54px] rounded-lg w-full">
+          افزودن آدرس
+        </button>
+      </div>
+    </div>
+
+    <!-- edit user location modal -->
+
+    <div
+      id="edit-location-modal"
+      class="fixed top-0 left-0 h-screen bg-black bg-opacity-50 w-full z-50 hidden items-center justify-center">
+      <div
+        class="bg-white md:w-2/4 overflow-y-auto w-5/6 md:p-6 p-3 flex flex-col gap-6 rounded-xl">
+        <p class="md:text-2xl font-bold mb-2">
+          ویرایش آدرس
+        </p>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">نام و نام خانوادگی</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="نام و نام خانوادگی..."
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">شماره تماس گیرنده</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="شماره تماس گیرنده..."
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div
+            class="bg-white dropdown-toggle border cursor-pointer border-borderColor rounded-md h-[54px] w-full flex items-center justify-between px-4 relative">
+            <div
+              class="flex items-center gap-1.5 absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs bg-opacity-0">استان</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <!-- label -->
+            <p class="text-sm dropdown-label text-muted">
+              انتخاب کنید
+            </p>
+
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt="" />
+
+            <!-- drop down -->
+
+            <div
+              class="w-full dropdown-items absolute top-14 z-20 rounded-md right-0 bg-white shadow-custom hidden flex-col">
+              <button
+                data-value="جدیدترین ها"
+                class="text-secondary text-sm rounded-t-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                جدید ترین ها
+              </button>
+
+              <button
+                data-value="پربازدید ترین ها"
+                class="text-secondary text-sm h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                پربازدید ترین ها
+              </button>
+
+              <button
+                data-value="پر بحث ترین ها"
+                class="text-secondary text-sm rounded-b-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                پر بحث ترین ها
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white dropdown-toggle border cursor-pointer border-borderColor rounded-md h-[54px] w-full flex items-center justify-between px-4 relative">
+            <div
+              class="flex items-center gap-1.5 absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs bg-opacity-0">شهر</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <!-- label -->
+            <p class="text-sm dropdown-label text-muted">
+              انتخاب کنید
+            </p>
+
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt="" />
+
+            <!-- drop down -->
+
+            <div
+              class="w-full dropdown-items absolute top-14 z-20 rounded-md right-0 bg-white shadow-custom hidden flex-col">
+              <button
+                data-value="تهران"
+                class="text-secondary text-sm rounded-t-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                تهران
+              </button>
+
+              <button
+                data-value="اراک"
+                class="text-secondary text-sm h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                اراک
+              </button>
+
+              <button
+                data-value="قم"
+                class="text-secondary text-sm rounded-b-md h-[54px] text-right hover:text-white hover:bg-secondary transition-all duration-200 p-3">
+                قم
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">آدرس</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : تهران ، خیابان فرشته"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">کد پستی</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : 39198545278"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="relative w-full">
+            <!-- label -->
+            <div
+              class="flex items-center gap-1 bg-white absolute right-2.5 -top-2.5">
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+              <p class="text-xs">پلاک</p>
+              <div
+                class="w-2 h-2 rounded-full bg-borderColor mt-1"></div>
+            </div>
+
+            <input
+              placeholder="مثال : پلاک 10"
+              type="text"
+              class="bg-white border px-3 placeholder:text-xs border-borderColor h-[54px] w-full flex-1 rounded-md" />
+          </div>
+          <div class="w-full hidden md:block"></div>
+        </div>
+
+        <button
+          class="bg-primary text-white h-[54px] rounded-lg w-full">
+          افزودن آدرس
+        </button>
+      </div>
+    </div>
+
+    <!-- edit -->
+
+    <script>
+      jalaliDatepicker.startWatch({
+        minDate: "attr",
+        maxDate: "attr",
+        time: true,
+      });
+    </script>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/dropdown.js"></script>
+    <script src="../js/dashboard/toggle.js"></script>
+  </body>
+</html>

@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-Light.woff")
+  src: url("../public/fonts/YekanBakhFaNum-Light.woff")
     format("woff");
   font-weight: 200;
   font-style: normal;
@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-Thin.woff")
+  src: url("../public/fonts/YekanBakhFaNum-Thin.woff")
     format("woff");
   font-weight: 300;
   font-style: normal;
@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-Regular.woff")
+  src: url("../public/fonts/YekanBakhFaNum-Regular.woff")
     format("woff");
   font-weight: 400;
   font-style: normal;
@@ -52,7 +52,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-SemiBold.woff")
+  src: url("../public/fonts/YekanBakhFaNum-SemiBold.woff")
     format("woff");
   font-weight: 500;
   font-style: normal;
@@ -61,7 +61,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-Bold.woff")
+  src: url("../public/fonts/YekanBakhFaNum-Bold.woff")
     format("woff");
   font-weight: 600;
   font-style: normal;
@@ -70,7 +70,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-ExtraBold.woff")
+  src: url("../public/fonts/YekanBakhFaNum-ExtraBold.woff")
     format("woff");
   font-weight: 700;
   font-style: normal;
@@ -79,7 +79,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-Black.woff")
+  src: url("../public/fonts/YekanBakhFaNum-Black.woff")
     format("woff");
   font-weight: 800;
   font-style: normal;
@@ -88,7 +88,7 @@
 
 @font-face {
   font-family: "YekanBakh";
-  src: url("../public/fonts/YekanBakh-ExtraBlack.woff")
+  src: url("../public/fonts/YekanBakhFaNum-ExtraBlack.woff")
     format("woff");
   font-weight: 900;
   font-style: normal;
@@ -139,6 +139,7 @@ html {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 0px 4px 16px 0px #15100033;
+  text-wrap: nowrap;
 }
 
 .btn-outlined {
@@ -171,6 +172,18 @@ html {
   align-content: start;
 }
 
+.swiper-circular-cards-container {
+  overflow: hidden;
+  position: relative;
+  align-content: start;
+}
+
+.swiper-salary-btn-container {
+  overflow: hidden;
+  position: relative;
+  align-content: start;
+}
+
 .swiper-course-service-container {
   overflow: hidden;
   position: relative;
@@ -183,12 +196,97 @@ html {
   align-content: start;
 }
 
+.swiper-images-container {
+  overflow: hidden;
+  position: relative;
+  min-height: 240px;
+
+  align-content: start;
+}
+
+.swiper-images-container .swiper-pagination {
+  display: flex;
+  position: absolute !important;
+  bottom: -20px !important;
+  left: 20px !important;
+  justify-content: end !important;
+  align-items: flex-end !important;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff !important;
+}
+
+.swiper-images-container .swiper-pagination-bullet {
+  width: 48px !important;
+  height: 40px !important;
+  text-align: center;
+  z-index: 1;
+  justify-content: center;
+  align-content: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff !important;
+  opacity: 1;
+  background: rgb(0, 0, 0, 0.01);
+  border-radius: 10px 10px 0px 0px !important;
+}
+
+.swiper-images-container .swiper-pagination-bullet-active {
+  color: #fff !important;
+  background: #ffbb00 !important;
+}
+
+.swiper-most-viewed-blogs-container {
+  overflow: hidden;
+  position: relative;
+  align-content: start;
+}
+
+.swiper-most-viewed-btn-container {
+  overflow: hidden;
+  position: relative;
+  z-index: 30;
+}
+
+.swiper-dashboard-orders-container {
+  overflow: hidden;
+  position: relative;
+  z-index: 30;
+}
+
+.swiper-dashboard-card-container {
+  overflow: hidden;
+  position: relative;
+  z-index: 30;
+}
+
+.swiper-most-viewed-btn-container {
+  overflow: hidden;
+  position: relative;
+  z-index: 30;
+}
+
+.swiper-score-cards-conteiner {
+  overflow: hidden;
+  position: relative;
+  z-index: 30;
+}
+
 .swiper-blogs-container {
   overflow: hidden;
   position: relative;
   height: 430px;
   padding-top: 20px;
   align-content: start;
+}
+
+.swiper-related-blogs-container {
+  overflow: hidden;
+  padding-top: 20px;
+  align-content: start;
+  height: auto;
+  max-height: 400px;
+  position: relative;
 }
 
 .swiper-books-container {
@@ -199,13 +297,12 @@ html {
 }
 
 .swiper-subscription-container {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   overflow: hidden;
-  position: relative;
-  height: 565px;
+  min-height: 600px !important;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 
 .swiper-slide {
@@ -221,6 +318,7 @@ html {
   /* Other styles for the pagination */
   text-align: center;
   margin-bottom: 20px;
+  top: 0px;
 }
 
 /* Default pagination bullets */
@@ -233,6 +331,13 @@ html {
   height: 8px !important;
   border-radius: 12px !important;
 }
+
+/* .swiper-blogs-pagination {
+  background: white !important;
+  width: 24px !important;
+  height: 8px !important;
+  border-radius: 12px !important;
+} */
 
 .idea-card:hover {
   background-image: url("./assets/hover-image.png");
@@ -260,7 +365,81 @@ html {
     opacity 0.3s ease-in-out;
 }
 
+.slider {
+  height: 3px;
+  position: relative;
+  background: #ddd;
+  border-radius: 5px;
+}
+.slider .progress {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background: #ffbb00;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+  border: 4px solid white;
+  outline: 1px solid rgb(230, 230, 230);
+  border-radius: 50%;
+  background: #ffbb00;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #ffbb00;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 768px) {
+  .swiper-images-container .swiper-pagination {
+    /* Other styles for the pagination */
+    text-align: center;
+    position: static;
+    justify-content: center !important;
+    left: 0px !important;
+  }
+
+  .swiper-images-container .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: #efefef;
+    font-size: 0 !important; /* Hide numbers */
+  }
+
+  .swiper-images-container
+    .swiper-pagination-bullet-active {
+    background: #0c0d0f !important;
+    width: 24px !important;
+    height: 8px !important;
+    border-radius: 12px !important;
+  }
+
   .btn {
     background-color: transparent;
     color: black;
@@ -269,6 +448,7 @@ html {
     border-radius: 0%;
     height: 50px;
     width: fit-content;
+    text-wrap: nowrap;
   }
 
   .swiper-container {
@@ -279,8 +459,12 @@ html {
     height: 370px;
   }
 
+  .swiper-related-blogs-container {
+    height: 380px;
+  }
+
   .swiper-subscription-container {
-    height: 510px;
+    min-height: 560px !important;
   }
 
   .btn-outlined {
@@ -305,4 +489,24 @@ html {
 .scrollbar-hidden {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+.toast-progress {
+  animation: progress 3s linear forwards;
+}
+
+.active-sidebar-item {
+  background-color: #fff8e026; /* Same background as hover */
+  color: #ffbb00; /* Same text color as hover */
+  font-weight: bold;
 }

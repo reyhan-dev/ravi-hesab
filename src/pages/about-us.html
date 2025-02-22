@@ -2,240 +2,946 @@
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../output.css" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>About us</title>
   </head>
-  <body class="font-yekan">
-    <!-- first section -->
-    <div class="w-full flex justify-center items-center mb-10">
-      <img src="../assets/Group 11.png" alt="imagetest" />
-    </div>
-    <!-- second section -->
-    <div
-      class="w-full flex justify-center items-center gap-10 flex-col md:flex-row md:w-[90%]"
-    >
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-[24px]">کمی درباره راوی حساب بخوانیم</h1>
-        <div>
-          <img src="../assets/svg-hub-109 7.svg" alt="imagetest" />
+  <body class="font-yekan text-secondary">
+    <header
+      class="h-[120px] bg-box px-extralg md:flex hidden items-center justify-between">
+      <div class="flex items-center gap-7">
+        <img
+          src="../assets/logo.png"
+          alt=-logo"
+          class="w-48 h-12 object-cover" />
+
+        <!-- search bar -->
+
+        <div
+          class="bg-white relative w-[448px] h-[54px] border px-3 border-borderColor rounded-md flex items-center gap-3">
+          <!-- Dropdown Button -->
+          <button
+            id="dropdownButton"
+            class="flex items-center justify-between gap-4 border-l w-1/3 border-l-borderColor pl-2">
+            <p
+              id="dropdownText"
+              class="text-secondary text-sm text-nowrap text-ellipsis truncate">
+              بخشنامه ها
+            </p>
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt=""
+              class="pt-1 transition-transform w-4 h-4"
+              id="arrowIcon" />
+          </button>
+
+          <!-- Dropdown Menu -->
+          <div
+            id="dropdownMenu"
+            class="w-[121px] max-h-40 absolute z-30 top-14 right-0 p-2 flex flex-col gap-1.5 bg-white rounded-lg shadow-custom transform scale-y-0 origin-top transition-all duration-200 ease-in-out opacity-0">
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              همه
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              بخشنامه ها
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              دوره ها
+            </button>
+            <button
+              class="dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+              مقالات
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="relative w-full">
+            <input
+              id="searchInput"
+              placeholder="دنبال چی میگردی..."
+              type="text"
+              class="placeholder:text-sm focus:ring-0 outline-none focus:outline-none w-full" />
+
+            <!-- Dropdown Search -->
+          </div>
+
+          <div
+            id="dropdownSearch"
+            class="bg-white rounded-lg min-h-32 max-h-72 shadow-custom p-3 flex-col gap-3 w-full absolute top-14 right-0 hidden">
+            <div class="flex items-center gap-1">
+              <img
+                src="../assets/document-text 1.png"
+                alt="" />
+              <p class="text-muted text-sm">بخشنامه ها</p>
+            </div>
+            <div
+              class="border-r border-borderColor pr-2 flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <img
+                  src="../assets/icons/textalign-right 1.svg"
+                  alt="" />
+                <p class="text-sm text-secondary">
+                  بخشنامه مالیاتی شماره یازده
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="../assets/icons/textalign-right 1.svg"
+                  alt="" />
+                <p class="text-sm text-secondary">
+                  بخشنامه مالیاتی شماره یازده
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button class="absolute left-2 pr-2 bg-white">
+            <img
+              src="../assets/icons/search-normal.svg"
+              alt="search" />
+          </button>
         </div>
-        <p class="text-[15px] text-center md:text-start">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، واستفاده از
-          طراحان گرافیک است، <br />
-          چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
-          <br />
-          برای شرایط فعلی تکنولوژی مورد...کاربرد متنوع با هدف بهبود ابزارهای
-          کاربردی میباشد، کتابهای زیادی <br />
-          در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
-          طلبد، تا با نرم <br />
-          افزارها شناخت بیشتری را برای طراحان رایانه ای. <br />
-          علی الخصوص طراحان خلاقی،فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-          صورت میتوان امید داشت <br />
-          که تمام و دشواری موجود طراحی اساسا مورد استفاده قرار گیرد.
+      </div>
+
+      <div class="flex gap-7 items-center">
+        <button class="btn">ورود/ثبت نام</button>
+        <div class="flex items-center gap-2">
+          <div class="">
+            <p class="text-[15px]">09304537723</p>
+            <p class="text-nowrap text-sm text-muted mt-2">
+              مشاوره و پشتیبـانی
+            </p>
+          </div>
+          <button
+            class="w-[54px] h-[54px] flex items-center justify-center rounded-md bg-primary">
+            <img
+              src="../assets/icons/headphone.svg"
+              alt=" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- header mobile -->
+
+    <header
+      class="flex md:hidden px-3 flex-col mt-2.5 gap-3">
+      <div class="flex px-2 items-center justify-between">
+        <div
+          id="mobile-menu-button"
+          class="w-12 cursor-pointer h-12 rounded-md border flex items-center justify-center">
+          <img
+            src="../assets/icons/hamburger-button 1.svg"
+            alt="" />
+        </div>
+
+        <img src="../assets/logo.png" class="w-28" alt="" />
+
+        <button
+          class="w-12 h-12 flex items-center justify-center rounded-md bg-white border b">
+          <img
+            src="../assets/icons/headphone 1.svg"
+            alt=" />
+        </button>
+      </div>
+
+      <div
+        class="bg-box mx-3 relative h-[50px] border px-3 border-borderColor rounded-md flex items-center gap-3">
+        <!-- Dropdown Button -->
+        <button
+          id="mobileDropdownButton"
+          class="flex items-center z-20 justify-between gap-4 border-l w-1/3 border-l-borderColor pl-2">
+          <p
+            id="mobileDropdownText"
+            class="text-secondary text-sm text-nowrap text-ellipsis truncate">
+            بخشنامه ها
+          </p>
+          <img
+            src="../assets/icons/arrow-down.svg"
+            alt=""
+            class="pt-1 transition-transform w-4 h-4"
+            id="mobileArrowIcon" />
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div
+          id="mobileDropdownMenu"
+          class="w-[121px] max-h-40 absolute z-20 top-14 right-0 p-2 flex flex-col gap-1.5 bg-white rounded-lg shadow-custom transform scale-y-0 origin-top transition-all duration-200 ease-in-out opacity-0">
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            همه
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            بخشنامه ها
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            دوره ها
+          </button>
+          <button
+            class="mobile-dropdown-item bg-secondary_lighten transition-all duration-200 h-7 rounded-lg text-sm text-secondary hover:bg-secondary hover:text-white py-1">
+            مقالات
+          </button>
+        </div>
+        <!-- search input -->
+
+        <div class="w-full relative">
+          <input
+            id="mobileSearchInput"
+            placeholder="دنبال چی میگردی..."
+            type="text"
+            class="placeholder:text-xs bg-box w-full focus:ring-0 outline-none focus:outline-none" />
+        </div>
+        <div
+          id="mobileDropdownSearch"
+          class="bg-white rounded-lg min-h-32 max-h-72 shadow-custom p-3 flex-col gap-3 w-full absolute top-[52px] right-0 hidden">
+          <div class="flex items-center gap-1">
+            <img
+              src="../assets/document-text 1.png"
+              alt="" />
+            <p class="text-muted text-sm">بخشنامه ها</p>
+          </div>
+          <div
+            class="border-r border-borderColor pr-2 flex flex-col gap-3">
+            <div class="flex items-center gap-2">
+              <img
+                src="../assets/icons/textalign-right 1.svg"
+                alt="" />
+              <p class="text-sm text-secondary">
+                بخشنامه مالیاتی شماره یازده
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <img
+                src="../assets/icons/textalign-right 1.svg"
+                alt="" />
+              <p class="text-sm text-secondary">
+                بخشنامه مالیاتی شماره یازده
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="absolute left-2 pr-2 bg-box">
+          <img
+            src="../assets//icons/search-normal.svg"
+            alt="search" />
+        </button>
+      </div>
+    </header>
+
+    <!-- mobile menu -->
+
+    <menu
+      id="mobile-menu"
+      class="w-full h-screen fixed z-50 right-0 top-0 px-3 pt-5 bg-white hidden">
+      <div class="flex items-center justify-between">
+        <img src="../assets/logo.png" class="w-28" alt="" />
+        <img
+          id="close-menu-button"
+          src="../assets/icons/close-circle 2.svg"
+          class="cursor-pointer"
+          alt="" />
+      </div>
+      <div
+        class="mt-8 border-t py-2 flex flex-col gap-3 border-borderColor">
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">صفحه اصلی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">خدمات ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">ایده های نوآورانه</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">دوره های آموزشی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">خدمات ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">مطالب وبلاگ</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">کتاب ها</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">پشتیبانی</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">ارتباط با ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+        <li
+          class="cursor-pointer flex items-center justify-between w-full border-b pb-5 border-borderColor">
+          <p class="text-secondary">درباره ما</p>
+          <img
+            src="../assets/icons/arrow-left-1 2.svg"
+            alt="" />
+        </li>
+      </div>
+      <button
+        class="w-full mt-5 h-[54px] bg-secondary text-white rounded-lg">
+        ورود /ثبت نام
+      </button>
+    </menu>
+
+    <!-- menu list desktop -->
+    <div
+      class="md:flex hidden mb-10 w-full text-sm list-none items-center text-nowrap justify-center gap-5 h-[50px] border-b border-borderColor">
+      <li class="cursor-pointer">صفحه اصلی</li>
+      <li class="cursor-pointer">خدمات ما</li>
+      <li class="cursor-pointer">ایده های نوآورانه</li>
+      <li class="cursor-pointer">دوره های آموزشی</li>
+      <li class="cursor-pointer">مطالب وبلاگ</li>
+      <li class="cursor-pointer">کتاب ها</li>
+      <li class="cursor-pointer">پشتیبانی</li>
+      <li class="cursor-pointer">ارتباط با ما</li>
+      <li class="cursor-pointer">درباره ما</li>
+    </div>
+
+    <div class="mx-[19px] md:mx-[169px]">
+      <img
+        class="md:w-[808px] mx-auto"
+        src="/src/assets/ravi-about.png"
+        alt="" />
+    </div>
+
+    <section
+      class="flex flex-col md:gap-[104px] md:flex-row md:flex-nowrap mx-[19px] md:mx-[169px]">
+      <div class="w-full">
+        <h1
+          class="font-extrabold text-right text-[20px] md:text-[24px]">
+          کمی درباره راوی حساب بخوانیم
+        </h1>
+        <img
+          class="mt-2 mb-6"
+          src="/src/assets/under-line.svg"
+          alt="" />
+        <p
+          class="text-right leading-[36px] text-[14px] md:text-[15px] md:leading-[45px]">
+          لورم ایپسوم متن ساختگی با تولید سادگی مفهوم صنعت
+          چاپ و استفاده از طراحان گرافیک است. برای شرایط
+          فعلی تکنولوژی مورد کاربرد متنوع هدف بهبود ابزارهای
+          کاربردی میباشد کتابه زیادی در شصت سه درصد گذشته
+          حال و آینده شناخت فراوان. على الخصوص طراحان خلاقی
+          فرهنگ پیشرو در زبان فارسی ایجاد کرد این صورت
+          میتوان امید داشت که تمام دشواری موجود طراحی اساسا
+          مورد استفاده قرار گیرد.
         </p>
       </div>
-      <img src="../assets/Group 1000004514 (1).png" alt="imagetest" />
-    </div>
-    <!-- third section -->
-    <div
-      class="w-full flex justify-center items-center gap-10 flex-col mt-20 md:flex-row md:w-[90%]"
-    >
-      <img src="../assets/Group 1000004506.svg" alt="imagetest" />
-      <div class="flex flex-col gap-4">
-        <h1 class="font-bold text-[24px]">داستان از کجا شروع شد؟</h1>
-        <div>
-          <img src="../assets/svg-hub-109 7.svg" alt="imagetest" />
-        </div>
-        <p class="text-[15px] leading-[45px] text-center md:text-start">
-          استانداردهای حسابداری شماره ۱ و ۲، دو استاندارد مهم حسابداری هستند که
-          آشنایی با آنها، <br />برای حسابداران و مدیران مالی ضروری است. این دوره
-          آموزشی، به شما کمک می‌کند تا با این دو <br />استاندارد به طور کامل
-          آشنا شوید و مهارت‌های لازم برای تهیه و ارائه صورت‌های مالی و صورت
-          <br />جریان‌های نقدی را کسب کنید. <br />در صورت تمایل به تسلط به امور
-          مالیاتی و آموزش مالیات جامع شما می توانید از طریق همین <br />
-          سایت به قسمت مربوطه مراجعه کنید. همچنین در صورت تمایل به آموزش قوانین
-          مالیاتی <br />
-          جدید به قسمت مربوطه مراجعه کنید تا همیشه به روز باشید
+      <div class="w-full">
+        <img
+          class="mt-10 mx-auto"
+          src="/src/assets/kart-zard-D.svg"
+          alt="" />
+      </div>
+    </section>
+
+    <section
+      class="flex flex-col md:gap-[104px] md:flex-row-reverse md:mt-[100px] mt-[60px] md:flex-nowrap mx-[19px] md:mx-[169px]">
+      <div class="w-full">
+        <h1
+          class="font-extrabold text-right text-[20px] md:text-[24px]">
+          داستان از کجا شروع شد؟
+        </h1>
+        <img
+          class="mt-2 mb-6"
+          src="/src/assets/under-line.svg"
+          alt="" />
+        <p
+          class="text-right leading-[36px] text-[14px] md:text-[15px] md:leading-[45px]">
+          لورم ایپسوم متن ساختگی با تولید سادگی مفهوم صنعت
+          چاپ و استفاده از طراحان گرافیک است. برای شرایط
+          فعلی تکنولوژی مورد کاربرد متنوع هدف بهبود ابزارهای
+          کاربردی میباشد کتابه زیادی در شصت سه درصد گذشته
+          حال و آینده شناخت فراوان. على الخصوص طراحان خلاقی
+          فرهنگ پیشرو در زبان فارسی ایجاد کرد این صورت
+          میتوان امید داشت که تمام دشواری موجود طراحی اساسا
+          مورد استفاده قرار گیرد.
         </p>
       </div>
-    </div>
-    <!-- forth section -->
-    <div
-      class="w-full flex justify-center items-center gap-3 flex-col mt-14 md:w-[90%]"
-    >
-      <div class="flex flex-col gap-3 md:flex-row">
-        <div class="flex gap-3 justify-center items-center">
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview.png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview (2).png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-3 justify-center items-center">
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview.png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview (1).png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:flex flex-col gap-3 justify-center items-center">
+      <div class="w-full">
+        <img
+          class="mt-10 mx-auto"
+          src="/src/assets/office-about-D.svg"
+          alt="" />
+      </div>
+    </section>
+
+    <section class="mx-[19px] md:mx-[169px]">
+      <header class="mt-[60px]">
+        <h1
+          class="font-extrabold text-center text-[20px] mt-10">
+          اعضای تیم راوی حساب را بشناسید
+        </h1>
+        <img
+          class="mx-auto mt-2 mb-6"
+          src="/src/assets/under-line.svg"
+          alt="" />
+        <p
+          class="text-center text-muted leading-[36px] text-[14px]">
+          ما در راوی‌حساب با تیمی حرفه‌ای و متعهد، همیشه در
+          تلاش بوده‌ایم تا خدماتی مفید و کاربردی به شما
+          ارائه دهیم. در همین راستا در تاریخ 1403/04/01 سند
+          چشم انداز و ماموریت بازبینی و برروی سایت قرار
+          گرفت. چشم انداز و ماموریت راوی‌حساب به شرح زیر
+          است.
+        </p>
+      </header>
+      <article
+        class="mt-5 grid grid-cols-2 grid-rows-4 md:grid-cols-5 md:grid-rows-2">
+        <div class="mt-[18px]">
           <div
-            class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-          >
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
             <img
-              src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview.png"
-              alt="imagetest"
-            />
+              src="/src/assets/interested-man-about.svg"
+              alt="" />
           </div>
-          <h1 class="font-bold">احسان علیخانی</h1>
-          <div
-            class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-          >
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
             مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/smiled-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/interested-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/smiled-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/interested-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/smiled-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/interested-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/smiled-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/interested-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+        <div class="mt-[18px]">
+          <div
+            class="bg-box px-7 pt-4 rounded-xl w-[160px] h-[163px] mx-auto">
+            <img
+              src="/src/assets/smiled-man-about.svg"
+              alt="" />
+          </div>
+          <p
+            class="font-yekan font-bold mt-2 text-center text-[14px]">
+            احسان علیخانی
+          </p>
+          <p
+            class="bg-primary_lighten text-primary py-1 px-2 font-yekan mt-2 text-center text-[12px] rounded-md w-[100px] mx-auto">
+            مدیریت مجموعه
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <article
+      class="grid grid-cols-2 grid-rows-2 text-center mt-[60px] md:grid-rows-1 md:grid-cols-4 md:text-right mx-[19px] md:mx-[169px]">
+      <div
+        class="p-[20px] mx-auto w-full h-full border-l border-b border-dashed border-borderColor md:border-b-0">
+        <img
+          class="mx-auto md:m-0"
+          src="/src/assets/cup-1.svg"
+          alt="" />
+        <p class="mt-[16px] font-extrabold text-lg">
+          تجربه کیفیت بالا
+        </p>
+        <p class="text-[14px] leading-9 text-muted">
+          کارشناسان ما هر روز هفته به صورت 24 ساعته آماده
+          پاسخگویی هستند.
+        </p>
+      </div>
+
+      <div
+        class="p-[20px] mx-auto w-full h-full border-r border-b border-dashed border-borderColor md:border-r-0 md:border-l md:border-b-0">
+        <img
+          class="mx-auto md:m-0"
+          src="/src/assets/shield-tick.svg"
+          alt="" />
+        <p class="mt-[16px] font-extrabold text-lg">
+          آموزش تخصصی و معتبر
+        </p>
+        <p class="text-[14px] leading-9 text-muted">
+          کارشناسان ما هر روز هفته به صورت 24 ساعته آماده
+          پاسخگویی هستند.
+        </p>
+      </div>
+
+      <div
+        class="p-[20px] mx-auto w-full h-full border-l border-t border-dashed border-borderColor md:border-t-0">
+        <img
+          class="mx-auto md:m-0"
+          src="/src/assets/card-tick.svg"
+          alt="" />
+        <p class="mt-[16px] font-extrabold text-lg">
+          مناسب ترین قیمت ها
+        </p>
+        <p class="text-[14px] leading-9 text-muted">
+          کارشناسان ما هر روز هفته به صورت 24 ساعته آماده
+          پاسخگویی هستند.
+        </p>
+      </div>
+
+      <div
+        class="p-[20px] mx-auto w-full h-full border-r border-t border-dashed border-borderColor md:border-t-0 md:border-r-0 md:border-l">
+        <img
+          class="mx-auto md:m-0"
+          src="/src/assets/category-2.svg"
+          alt="" />
+        <p class="mt-[16px] font-extrabold text-lg">
+          گستردگی و تنوع خدمات
+        </p>
+        <p class="text-[14px] leading-9 text-muted">
+          کارشناسان ما هر روز هفته به صورت 24 ساعته آماده
+          پاسخگویی هستند.
+        </p>
+      </div>
+    </article>
+    <footer class="">
+      <div class="bg-secondary md:pb-0 pt-10 w-full">
+        <!-- footer desktop  -->
+
+        <div
+          class="md:flex hidden justify-between gap-5 px-extralg">
+          <!-- access part -->
+          <div class="flex flex-col gap-3">
+            <p class="text-white text-xl font-bold">
+              دسترسی سریع
+            </p>
+            <div class="flex gap-10">
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>آموزش مالیات بر ارث</li>
+                <li>آموزش مالیات حقوق</li>
+                <li>آموزش مالیات دستگاه پوز</li>
+                <li>آموزش مالیات تراکنش بانکی</li>
+                <li>آموزش مالیات دستگاه پوز</li>
+              </ul>
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>وکیل مالیاتی</li>
+                <li>دادرسی مالیاتی</li>
+                <li>خدمات مالیاتی</li>
+                <li>بخشنامه مالیاتی</li>
+                <li>آموزش معاف از مالیات</li>
+              </ul>
+            </div>
+          </div>
+          <!-- duty part -->
+
+          <div class="flex flex-col gap-3">
+            <p class="text-white text-xl font-bold">
+              رسالت راوی حساب
+            </p>
+            <div class="flex gap-10">
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>مقررات مالیاتی</li>
+                <li>مقررات وزارت کار</li>
+                <li>مقررات گمرک</li>
+                <li>مقررات قوه قضائیه</li>
+                <li>مقررات بیمه‌ای</li>
+              </ul>
+              <ul class="text-white flex flex-col gap-2.5">
+                <li>قوانین کشور</li>
+                <li>مقررات وزارت صنعت، معدن و تجارت</li>
+                <li>اطلاعیه های مالیاتی</li>
+                <li>بخشنامه های وزارت اقتصاد</li>
+                <li>مقررات بانک مرکزی</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- rules part -->
+
+          <div class="flex flex-col gap-3 max-w-[460px]">
+            <p class="text-white text-xl font-bold">
+              مقررات و بخشنامه ها
+            </p>
+            <div class="flex gap-10">
+              <p class="text-white">
+                رسالت موسسه خدماتی آموزشی راوی حساب بهبود و
+                ارتقا دانش مالیاتی افراد است. تیم راوی
+                حساب با نیازها و مشکلات مالیاتی افراد آشناست
+                و با ارائه آموزش‌ مالیات در فرمت های متنوع و
+                جامع، تلاش کرده تا اطلاعات و مهارت‌های لازم
+                برای مدیریت بهتر امور مالی و دستیابی به
+                بهره‌وری بیشتر را به مخاطبین عزیز انتقال
+                دهیم تا مخاطبین و مشتریان گرانقدر ما ...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer mobile -->
+
+        <div class="flex md:hidden flex-col gap-5 px-5">
+          <!-- Footer Accordion -->
+          <div class="flex flex-col gap-4">
+            <!-- Accordion Header -->
+            <div
+              class="accordion-header w-full bg-white flex items-center justify-between px-3 cursor-pointer bg-opacity-10 h-14 rounded-md text-white"
+              onclick="toggleAccordion('accessAccordion')">
+              <p class="font-bold text-lg">دسترسی سریع</p>
+              <img
+                class="arrow-icon rotate-180"
+                src="../assets/icons/arrow-white.svg"
+                alt="" />
+            </div>
+
+            <!-- Accordion Content -->
+            <div
+              id="accessAccordion"
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="flex gap-10 text-sm">
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>آموزش مالیات بر ارث</li>
+                  <li>آموزش مالیات حقوق</li>
+                  <li>آموزش مالیات دستگاه پوز</li>
+                  <li>آموزش مالیات تراکنش بانکی</li>
+                  <li>آموزش مالیات دستگاه پوز</li>
+                </ul>
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>وکیل مالیاتی</li>
+                  <li>دادرسی مالیاتی</li>
+                  <li>خدمات مالیاتی</li>
+                  <li>بخشنامه مالیاتی</li>
+                  <li>آموزش معاف از مالیات</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for the second accordion -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="accordion-header w-full bg-white flex items-center justify-between px-3 cursor-pointer bg-opacity-10 h-14 rounded-md text-white"
+              onclick="toggleAccordion('missionAccordion')">
+              <p class="font-bold text-lg">
+                رسالت راوی حساب
+              </p>
+              <img
+                class="arrow-icon rotate-180"
+                src="../assets/icons/arrow-white.svg"
+                alt="" />
+            </div>
+
+            <div
+              id="missionAccordion"
+              class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="flex gap-10 text-sm">
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>مقررات مالیاتی</li>
+                  <li>مقررات وزارت کار</li>
+                  <li>مقررات گمرک</li>
+                  <li>مقررات قوه قضائیه</li>
+                  <li>مقررات بیمه‌ای</li>
+                </ul>
+                <ul
+                  class="text-white flex flex-col gap-2.5">
+                  <li>قوانین کشور</li>
+                  <li>مقررات وزارت صنعت، معدن و تجارت</li>
+                  <li>اطلاعیه های مالیاتی</li>
+                  <li>بخشنامه های وزارت اقتصاد</li>
+                  <li>مقررات بانک مرکزی</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white md:mx-[70px] mx-5 flex-wrap rounded-md mt-10 md:p-5 p-3 gap-3 flex items-center justify-between">
+          <!-- address -->
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border md:border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img
+                src="../assets/icons/location.svg"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                آدرس:
+              </p>
+              <p class="text-secondary text-sm">
+                تهران، خیابان شریعتی روبروی ظفر کوچه صادقیان
+                پلاک ۱
+              </p>
+            </div>
+          </div>
+          <!-- email -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img src="../assets/icons/sms.svg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                ایمیل:
+              </p>
+              <p class="text-secondary text-sm">
+                info@ravihesab.com
+              </p>
+            </div>
+          </div>
+          <!-- call -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img
+                src="../assets/icons/call-calling.svg"
+                alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                تماس:
+              </p>
+              <p class="text-secondary text-sm">
+                09304537723
+              </p>
+            </div>
+          </div>
+
+          <!-- working hour -->
+
+          <div class="flex md:gap-3 items-center">
+            <div
+              class="md:border border-secondary flex items-center justify-center w-[52px] h-[52px] rounded-md">
+              <img src="../assets/icons/clock.svg" alt="" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="text-muted text-sm md:block hidden">
+                ساعات کاری:
+              </p>
+              <p class="text-secondary text-sm">
+                8 صبح الی 17:30
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="md:h-[120px] p-5 mt-10 md:px-extralg bg-white bg-opacity-5 w-full text-white flex md:flex-row flex-col items-center md:justify-between justify-center gap-5">
+          <div
+            class="flex gap-3 items-center justify-center">
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img
+                class="object-cover rounded-md"
+                src="../assets/zarinpal.png"
+                alt="" />
+            </div>
+
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img
+                src="../assets/enemad 3.png"
+                alt=""
+                class="object-cover" />
+            </div>
+            <div
+              class="w-[50px] h-[50px] rounded-md flex items-center justify-center bg-white">
+              <img src="../assets/samandehi.png" alt="" />
+            </div>
+          </div>
+          <p class="text-sm md:text-right text-center">
+            تمامی حقوق مادی و معنوی این وبسایت متعلق به راوی
+            حساب می‌باشد.
+          </p>
+          <div class="flex gap-2">
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img src="../assets/icons/x 1.svg" alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/instagram 1.svg"
+                alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/telegram 1.svg"
+                alt="" />
+            </div>
+            <div
+              class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+              <img
+                src="../assets/icons/facebook-tag 1.svg"
+                alt="" />
+            </div>
           </div>
         </div>
       </div>
-      <div class="flex flex-col gap-3 md:flex-row">
-        <div class="flex gap-3 justify-center items-center">
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview.png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview (2).png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-3 justify-center items-center">
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview.png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-          <div class="flex flex-col justify-center items-center gap-3">
-            <div
-              class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-            >
-              <img
-                src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview (1).png"
-                alt="imagetest"
-              />
-            </div>
-            <h1 class="font-bold">احسان علیخانی</h1>
-            <div
-              class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-            >
-              مدیریت مجموعه
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:flex flex-col gap-3 justify-center items-center">
-          <div
-            class="bg-slate-200 flex justify-center items-end rounded-md h-[253px] px-6"
-          >
-            <img
-              src="../assets/inspired-young-man-denim-shirt-asks-pay-attention-something-very-interesting-removebg-preview.png"
-              alt="imagetest"
-            />
-          </div>
-          <h1 class="font-bold">احسان علیخانی</h1>
-          <div
-            class="text-primary p-2 bg-yellow-200 flex justify-center items-center rounded-md"
-          >
-            مدیریت مجموعه
-          </div>
-        </div>
-      </div>
-    </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="../js/index.js"></script>
   </body>
 </html>
